@@ -1,0 +1,34 @@
+{
+  "name": "babylonjs-editor-generated-template",
+  "version": "0.0.1",
+  "description": "Generated Template by BabylonJS Editor v3.0",
+  "scripts": {
+    "clean": "rimraf .build && rimraf .declaration",
+    "compile": "tsc -p .",
+    "build": "npm run clean && npm run compile",
+    "watch": "tsc -p . --watch",
+    "webserver": "http-server -p 1338"
+  },
+  "license": "(Apache-2.0)",
+  "devDependencies": {
+    "@types/systemjs": "0.20.6",
+    "@types/javascript-astar": "~0.0.29",
+    "typescript": "~3.0.1",
+    "http-server": "^0.9.0"
+  },
+  "dependencies": {
+    "systemjs-plugin-css": "~0.1.35",
+    "systemjs": "~0.20.19",
+    "rimraf": "2.6.3",
+    "es6-promise": "4.1.0",
+    "litegraph.js": "0.7.0",
+    "babylonjs": "4.0.3",
+    "babylonjs-gui": "4.0.3",
+    "babylonjs-loaders": "4.0.3",
+    "babylonjs-materials": "4.0.3",
+    "babylonjs-procedural-textures": "4.0.3",
+    "babylonjs-editor": "3.1.1",
+    "cannon": "~0.6.2",
+    "earcut": "~2.1.3"
+  }
+}
