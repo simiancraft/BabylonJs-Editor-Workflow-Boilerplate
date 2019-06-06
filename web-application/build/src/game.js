@@ -24,7 +24,8 @@ var Game = /** @class */ (function () {
         // Load Scene
         var _this = this;
         var rainyDay = "./scenes/rainy-day/";
-        var currentScene = rainyDay;
+        var tileRoom = "./scenes/tile-room/";
+        var currentScene = tileRoom;
         babylonjs_1.SceneLoader.Load("" + currentScene, "scene.babylon", this.engine, function (scene) {
             _this.scene = scene;
             // No camera?
