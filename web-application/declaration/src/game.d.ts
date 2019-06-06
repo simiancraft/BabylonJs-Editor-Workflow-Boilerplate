@@ -1,4 +1,4 @@
-import { Engine, Scene } from 'babylonjs';
+import { Engine, Scene } from "babylonjs";
 export default class Game {
     engine: Engine;
     canvas: HTMLCanvasElement;

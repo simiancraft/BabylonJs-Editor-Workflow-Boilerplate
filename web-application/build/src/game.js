@@ -8,14 +8,14 @@ var Game = /** @class */ (function () {
      */
     function Game() {
         var _this = this;
-        this.canvas = document.getElementById('renderCanvas');
+        this.canvas = (document.getElementById("renderCanvas"));
         this.scene = null;
         // Create engine
         this.engine = new babylonjs_1.Engine(this.canvas, true, {
         // Options
         });
         // Events
-        window.addEventListener('resize', function () { return _this.engine.resize(); });
+        window.addEventListener("resize", function () { return _this.engine.resize(); });
     }
     /**
      * Runs the game
@@ -23,7 +23,7 @@ var Game = /** @class */ (function () {
     Game.prototype.run = function () {
         var _this = this;
         // Load Scene
-        babylonjs_1.SceneLoader.Load('./scene/', 'scene.babylon', this.engine, function (scene) {
+        babylonjs_1.SceneLoader.Load("./scenes/rainy-day/", "scene.babylon", this.engine, function (scene) {
             _this.scene = scene;
             // No camera?
             if (!_this.scene.activeCamera) {
@@ -32,9 +32,9 @@ var Game = /** @class */ (function () {
             // Attach camera
             _this.scene.activeCamera.attachControl(_this.canvas, true);
             // Load extensions
-            babylonjs_1.Tools.LoadFile('./scene/project.editorproject', function (data) {
+            babylonjs_1.Tools.LoadFile("./scenes/rainy-day/project.editorproject", function (data) {
                 // Apply extensions (such as custom code, custom materials etc.)
-                babylonjs_editor_1.Extensions.RoolUrl = './scene/';
+                babylonjs_editor_1.Extensions.RoolUrl = "./scenes/rainy-day/";
                 babylonjs_editor_1.Extensions.ApplyExtensions(_this.scene, JSON.parse(data));
                 // Run render loop
                 _this.engine.runRenderLoop(function () {
