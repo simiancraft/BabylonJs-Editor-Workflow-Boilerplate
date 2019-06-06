@@ -36,8 +36,13 @@ export default class Game {
    */
   public run(): void {
     // Load Scene
+
+    const rainyDay = `./scenes/rainy-day/`;
+    const tileRoom = `./scenes/tile-room/`;
+    let currentScene = tileRoom;
+
     SceneLoader.Load(
-      "./scenes/rainy-day/",
+      `${currentScene}`,
       "scene.babylon",
       this.engine,
       (scene: Scene) => {
@@ -53,10 +58,10 @@ export default class Game {
 
         // Load extensions
         Tools.LoadFile(
-          "./scenes/rainy-day/project.editorproject",
+          `${currentScene}/project.editorproject`,
           (data: string) => {
             // Apply extensions (such as custom code, custom materials etc.)
-            Extensions.RoolUrl = "./scenes/rainy-day/";
+            Extensions.RoolUrl = currentScene;
             Extensions.ApplyExtensions(this.scene, JSON.parse(data));
 
             // Run render loop

@@ -21,9 +21,11 @@ var Game = /** @class */ (function () {
      * Runs the game
      */
     Game.prototype.run = function () {
-        var _this = this;
         // Load Scene
-        babylonjs_1.SceneLoader.Load("./scenes/rainy-day/", "scene.babylon", this.engine, function (scene) {
+        var _this = this;
+        var rainyDay = "./scenes/rainy-day/";
+        var currentScene = rainyDay;
+        babylonjs_1.SceneLoader.Load("" + currentScene, "scene.babylon", this.engine, function (scene) {
             _this.scene = scene;
             // No camera?
             if (!_this.scene.activeCamera) {
@@ -32,9 +34,9 @@ var Game = /** @class */ (function () {
             // Attach camera
             _this.scene.activeCamera.attachControl(_this.canvas, true);
             // Load extensions
-            babylonjs_1.Tools.LoadFile("./scenes/rainy-day/project.editorproject", function (data) {
+            babylonjs_1.Tools.LoadFile(currentScene + "/project.editorproject", function (data) {
                 // Apply extensions (such as custom code, custom materials etc.)
-                babylonjs_editor_1.Extensions.RoolUrl = "./scenes/rainy-day/";
+                babylonjs_editor_1.Extensions.RoolUrl = currentScene;
                 babylonjs_editor_1.Extensions.ApplyExtensions(_this.scene, JSON.parse(data));
                 // Run render loop
                 _this.engine.runRenderLoop(function () {
