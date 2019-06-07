@@ -88,7 +88,7 @@ Make sure you select your newly created `Rainy-Day` folder and proceed. You shou
 📁editor-projects
     📁Rainy-Day
         📁scene
-        |   |📄albedo.png
+        |   |📄 albedo.png
         |   |📄 amiga.jpg
         |   |📄 documentation.png
         |   |📄 environment.dds
