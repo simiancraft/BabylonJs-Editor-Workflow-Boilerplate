@@ -76,3 +76,51 @@ You can save this short video, just click `Save Record` and you will get a nice-
 [You can see the output of this little example here](https://i.imgur.com/V0H8SpK.mp4) (Hosted on Imgur)
 
 #### Save It!
+So far we've opened the editor. We've made a very tiny change  to the meshes by reassigning some materials and we want to save our work. Let's decide to call this scene `Rainy-Day`. I will now make a folder inside of the `editor-projects` folder called `Rainy-Day`. So far, this seems excessively nested, but the reasoning will be clear as you read.
+
+![image](https://user-images.githubusercontent.com/954596/59080066-69a9d100-88ac-11e9-8a51-19b27efe75e7.png)
+
+Now you need to go to the Project Menu and click `Save Project As...`
+![image](https://user-images.githubusercontent.com/954596/59080083-87773600-88ac-11e9-90e3-3f9ceff85fc1.png)
+
+Make sure you select your newly created `Rainy-Day` folder and proceed. You should now have a folder structure like this
+```bash
+📁editor-projects
+    📁Rainy-Day
+        📁scene
+        |   | albedo.png
+        |   |📄 amiga.jpg
+        |   |📄 documentation.png
+        |   |📄 environment.dds
+        |   |📄 flake.bmp
+        |   |📄 flare.png
+        |   |📄 mahogfloor_ao.jpg
+        |   |📄 mahogfloor_basecolor.png
+        |   |📄 mahogfloor_normal.jpg
+        |   |📄 rain.jpg
+        |   |📄 reflectivity.png
+        |   |📄 rustediron2_basecolor.png
+        |   |📄 rustediron2_metallic.png
+        |   |📄 rustediron2_normal.png
+        |   |📄 rustediron2_roughness.png
+        |   `📜 scene.babylon
+        `📜 scene.editorproject
+
+3 directories, 17 files
+```
+![image](https://user-images.githubusercontent.com/954596/59080127-d1f8b280-88ac-11e9-8dd5-920a92263117.png)
+
+Inside of the `Rainy-Day` Directory there's the `scene` folder with the art and assets, and just above that is `scene.editorproject`.
+
+#### Iterate!
+
+Close the editor. Imagine you're another person working on the project. Or you're you later in the day after lunch. Its time to reopen.
+
+![image](https://user-images.githubusercontent.com/954596/59080330-c2c63480-88ad-11e9-90a5-0d17e27592f6.png)
+
+Voila! Just like you've left it! 
+
+Now we can make another change. I will move one of the orbs, and remove the documentation plane.
+
+#### Remove Documentation Plane (and the Graph Tab)
+One way you can select something is to select it in the preview pane. Another way to do it is in the `Graph` Tab as well.
