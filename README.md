@@ -15,7 +15,7 @@ In short here are our goals:
 4. Use the editor to scaffold a web project and provision it to handle our scenes.
 5. Be able to make changes to the scenes, and to the web project and maintain a proper sequence of events so that no work is lost and the workflow is comfortable.
 
-## Create Your First Scene
+## 1. Create Your First Scene
 
 After Installing the BabylonJsEditor on your particular platform, open the editor.
 ![image](https://user-images.githubusercontent.com/954596/59078070-05364400-88a3-11e9-82d4-f05da127312c.png)
@@ -120,9 +120,19 @@ Of special note are two files
 
 I encourage you to open them both in your favorite editor (VS Code) and take a look.
 
-#### Iterate!
+---
 
-Close the editor. Imagine you're another person working on the project. Or you're you later in the day after lunch. Its time to reopen.
+### 2. Iterate on that Scene.
+
+Close the editor. 
+
+Imagine you're another person working on the project. Or you're you later in the day after lunch. Time passes. We iterate.
+
+Its time to reopen. Doubleclick the `scene.editorproject` file now! 
+
+![image](https://user-images.githubusercontent.com/954596/59081066-d1aee600-88b1-11e9-9d5f-eaf6cd4ee4ea.png)
+
+The editor will reopen the scene, as expected.
 
 ![image](https://user-images.githubusercontent.com/954596/59080330-c2c63480-88ad-11e9-90a5-0d17e27592f6.png)
 
@@ -131,4 +141,13 @@ Voila! Just like you've left it!
 Now we can make another change. I will move one of the orbs, and remove the documentation plane.
 
 #### Remove Documentation Plane (and the Graph Tab)
-One way you can select something is to select it in the preview pane. Another way to do it is in the `Graph` Tab as well.
+One way you can select something is to select it in the preview pane. Another way to do it is in the `Graph` Tab as well. Select the Documentation and hit `Delete`. Boom, its gone.
+
+![graph-optimized](https://user-images.githubusercontent.com/954596/59080871-b2638900-88b0-11e9-9a06-fc554037b05f.gif)
+
+#### Manipulate the Meshes with the `Preview` Controls
+
+One way to maipulate the qualities, such as position, scale and rotation of assets in the scene is to select the item by clicking in it, or in the `Graph` Tab and then go to the corresponding property in the `Inspector` and just type in or sleect what you like. This is how we changed the Material on these spheres. There's another way to do it with the controls atop the preview. 
+
+I don't think there's much to say here, except this is exactly how any other 3d program behavies, such as Unity or Blender. Go ahead and modify these meshes and also notice the values change in the `Inspector` Tab as you do.
+
