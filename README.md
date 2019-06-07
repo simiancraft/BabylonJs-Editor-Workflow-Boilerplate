@@ -166,16 +166,16 @@ You can, in this case, just click `Save Project` or CTRL+ S. However, when we be
 
 Great. This is the core iterative loop for working on a single scene. We took some time to look at some aspects of the editor in this part of the workflow tutorial because; thus far, the workflow is very simple. It only consists of our one single project.
 
-1. double click your scene
-2. make changes
-3. `save project a`s, in your folder.
-4. repeat
+1. Open Project: Double click the `scene.editorproject` file.
+2. Do stuff: Make Changes.
+3. Save: Project > `Save Project As ...`, in your named folder.
+4. Repeat
 
 Next, we will add another scene, before we explore how the process will be modified in the context of a web application that relies on this editor.
 
-### 3. Make a new scene.
+### 3. Make another new scene.
 
-Tom ake the pattern more clear, it makes sense to make a second scene.
+To make the pattern for scene management in a larger project more clear, it makes sense to also make a second scene.
 
 
 
