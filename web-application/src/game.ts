@@ -39,6 +39,7 @@ export default class Game {
 
     // TODO: use this pattern to swap these:
     // https://doc.babylonjs.com/how_to/multi_scenes#switch-scenes
+    // example: https://www.babylonjs-playground.com/#MXCRPS#1
     const rainyDay = `./scenes/rainy-day/`;
     const tileRoom = `./scenes/tile-room/`;
     let currentScene = tileRoom;
