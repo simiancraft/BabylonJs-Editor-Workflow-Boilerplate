@@ -112,6 +112,14 @@ Make sure you select your newly created `Rainy-Day` folder and proceed. You shou
 
 Inside of the `Rainy-Day` Directory there's the `scene` folder with the art and assets, and just above that is `scene.editorproject`.
 
+Of special note are two files
+
+1. 📜 `scene.babylon` - this is a JSON file that contains all the information about your scene, such as the meshes, cameras, lights and so on. This goes right alongside the assets, like the textures
+
+2. 📜 `scene.editorproject` - this is also a JSON file, and it contains information used by the *editor*. For isntance, the list of the materials, the files list, globalConfigurations, and the current state of the tools, like what is open or closed, or what theme you have.
+
+I encourage you to open them both in your favorite editor (VS Code) and take a look.
+
 #### Iterate!
 
 Close the editor. Imagine you're another person working on the project. Or you're you later in the day after lunch. Its time to reopen.
