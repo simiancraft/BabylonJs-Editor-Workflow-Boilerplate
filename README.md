@@ -65,7 +65,7 @@ When you do, you'll see a window appear that plays the current scene. This is th
 You can see your scene now without the labels, and some basic information in a window, such as the current FPS and the size of the game window. You can use `WASD` and your mouse to fly around with the camera. This is how we think the scene will look.
 
 #### SideQuest: Make a Movie
-You can even click record, and record a short scene with the camera, by clicking the record button that appeared.
+The `Game` tab has a cool feature. You can record a short scene with the camera, by clicking the record button that appeared.
 
 ![smallest-gif](https://user-images.githubusercontent.com/954596/59079773-e176fc00-88aa-11e9-98f9-f8822c662279.gif)
 
