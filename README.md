@@ -1,4 +1,5 @@
-#Babylon JS Editor Workflow Boilerplate
+# Babylon JS Editor Workflow Boilerplate
+---
 
 One of the most important things in working in the BabylonJs Editor system is a reliable and stable workflow. The purpose of this short guide is to jumpstart anyone with the BabylonJs editor, and adopt the recommended workflow. 
 
