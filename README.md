@@ -1,20 +1,6 @@
 # Babylon JS Editor Workflow Boilerplate
 
-- [Babylon JS Editor Workflow Boilerplate](#babylon-js-editor-workflow-boilerplate)
-  - [1. Create Your First Scene](#1-create-your-first-scene)
-    - [Your First Clicks](#your-first-clicks)
-      - [Set Up Folders](#set-up-folders)
-      - [Small Change in the Mesh Inspector](#small-change-in-the-mesh-inspector)
-      - [Checking Your Work](#checking-your-work)
-      - [SideQuest: Make a Movie](#sidequest-make-a-movie)
-      - [Save It!](#save-it)
-    - [2. Iterate on that Scene.](#2-iterate-on-that-scene)
-      - [Remove Documentation Plane and The Graph Tab](#remove-documentation-plane-and-the-graph-tab)
-      - [Manipulate Orbs with the `Preview` Controls](#manipulate-orbs-with-the-preview-controls)
-      - [Nice. Now Resave.](#nice-now-resave)
-    - [3. Make another new scene.](#3-make-another-new-scene)
-
----
+![image](https://user-images.githubusercontent.com/954596/59084404-b697a280-88c0-11e9-959a-336c0b8d15e2.png)
 
 One of the most important things in working in the BabylonJs Editor system is a reliable and stable workflow. The purpose of this short guide is to jumpstart anyone with the BabylonJs editor, and adopt the recommended workflow.
 
@@ -28,14 +14,30 @@ In short here are our goals:
 4. Use the editor to scaffold a web project and provision it to handle our scenes.
 5. Be able to make changes to the scenes, and to the web project and maintain a proper sequence of events so that no work is lost and the workflow is comfortable.
 
-## 1. Create Your First Scene
+---
+
+- [Babylon JS Editor Workflow Boilerplate](#babylon-js-editor-workflow-boilerplate)
+  - [1. Create Your First Scene](#1-create-your-first-scene)
+      - [Your First Clicks](#your-first-clicks)
+      - [Set Up Folders](#set-up-folders)
+      - [Small Change in the Mesh Inspector](#small-change-in-the-mesh-inspector)
+      - [Checking Your Work](#checking-your-work)
+      - [SideQuest: Make a Movie](#sidequest-make-a-movie)
+      - [Save It!](#save-it)
+  - [2. Iterate on that Scene.](#2-iterate-on-that-scene)
+      - [Remove Documentation Plane and The Graph Tab](#remove-documentation-plane-and-the-graph-tab)
+      - [Manipulate Orbs with the `Preview` Controls](#manipulate-orbs-with-the-preview-controls)
+      - [Resave.](#resave)
+  - [3. Make another new scene.](#3-make-another-new-scene)
 
 ---
+
+## 1. Create Your First Scene
 
 After Installing the BabylonJsEditor on your particular platform, open the editor.
 ![image](https://user-images.githubusercontent.com/954596/59078070-05364400-88a3-11e9-82d4-f05da127312c.png)
 
-### Your First Clicks
+#### Your First Clicks
 
 You should see something like the image above. This is the editor in a default state. If at any point you're concerned your editor is not in a default state, a handy tool is the reset button in the `edit` menu. You can click this now, or anytime you need to reset the editor into a default, 'vanilla' state.
 
@@ -147,9 +149,7 @@ Of special note are two files
 
 I encourage you to open them both in your favorite editor (VS Code) and take a look.
 
-### 2. Iterate on that Scene.
-
----
+## 2. Iterate on that Scene.
 
 Close the editor.
 
@@ -188,7 +188,7 @@ I don't think there's much to say here, except this is exactly how any other 3d 
 
 ![preview-controls-optimized](https://user-images.githubusercontent.com/954596/59081276-dcb64600-88b2-11e9-889e-2c6de7da65ef.gif)
 
-#### Nice. Now Resave.
+#### Resave.
 
 You can, in this case, just click `Save Project` or CTRL+ S. However, when we begin to export to the web project as well as work in these scenes it might be a good idea to always use the `Save Project As ...` Option, so that you always explicitly target the correct folder and never accidentally stomp over the wrong project accidentally.
 
@@ -201,8 +201,6 @@ Great. This is the core iterative loop for working on a single scene. We took so
 
 Next, we will add another scene, before we explore how the process will be modified in the context of a web application that relies on this editor.
 
-### 3. Make another new scene.
-
----
+## 3. Make another new scene.
 
 To make the pattern for scene management in a larger project more clear, it makes sense to also make a second scene.
