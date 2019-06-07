@@ -69,10 +69,15 @@ You can even click record, and record a short scene with the camera, by clicking
 
 ![smallest-gif](https://user-images.githubusercontent.com/954596/59079773-e176fc00-88aa-11e9-98f9-f8822c662279.gif)
 
-You can save this short video, just click `Save Record` and you will get a nice-quality .webm video
+You can save this short video we made. 
+Click `Save Record`, which is a new option that appears next to the `Record` button.
 
 ![image](https://user-images.githubusercontent.com/954596/59079567-f901b500-88a9-11e9-8958-e30eb3b8bd0e.png)
 
+
+Doing so you will output a nice quality .webm video that you can save locally.
+
+[![image](https://user-images.githubusercontent.com/954596/59082997-2c990b00-88bb-11e9-917b-d24fd6d03371.png)](https://i.imgur.com/V0H8SpK.mp4)
 [You can see the output of this little example here](https://i.imgur.com/V0H8SpK.mp4) (Hosted on Imgur)
 
 #### Save It!
