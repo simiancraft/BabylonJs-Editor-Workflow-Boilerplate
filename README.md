@@ -138,16 +138,44 @@ The editor will reopen the scene, as expected.
 
 Voila! Just like you've left it! 
 
-Now we can make another change. I will move one of the orbs, and remove the documentation plane.
+Now we can make more small changes. I will 
+1. remove the documentation plane.
+2. move and scale some of the orbs
 
-#### Remove Documentation Plane (and the Graph Tab)
+#### Remove Documentation Plane and The Graph Tab
 One way you can select something is to select it in the preview pane. Another way to do it is in the `Graph` Tab as well. Select the Documentation and hit `Delete`. Boom, its gone.
 
 ![graph-optimized](https://user-images.githubusercontent.com/954596/59080871-b2638900-88b0-11e9-9a06-fc554037b05f.gif)
 
-#### Manipulate the Meshes with the `Preview` Controls
+The graph tab seems less useful at this time with so few things, but it can be a really good way to find meshes with the search box and also to avoid any awkwardness with clicking around in the `Preview` Tab too. 
+
+As your scene grows, so does the utility of this tab.
+
+#### Manipulate Orbs with the `Preview` Controls
 
 One way to maipulate the qualities, such as position, scale and rotation of assets in the scene is to select the item by clicking in it, or in the `Graph` Tab and then go to the corresponding property in the `Inspector` and just type in or sleect what you like. This is how we changed the Material on these spheres. There's another way to do it with the controls atop the preview. 
 
 I don't think there's much to say here, except this is exactly how any other 3d program behavies, such as Unity or Blender. Go ahead and modify these meshes and also notice the values change in the `Inspector` Tab as you do.
+
+![preview-controls-optimized](https://user-images.githubusercontent.com/954596/59081276-dcb64600-88b2-11e9-889e-2c6de7da65ef.gif)
+
+#### Nice. Now Resave.
+
+You can, in this case, just click `Save Project` or CTRL+ S. However, when we begin to export to the web project as well as work in these scenes it might be a good idea to always use the `Save Project As ...` Option, so that you always explicitly target the correct folder and never accidentally stomp over the wrong project accidentally.
+
+
+Great. This is the core iterative loop for working on a single scene. WE took some time to look at some aspects of the editor in this part of the workflow tutorial because; thusfar, the workflow is very simple. It only consists of the one project.
+
+1. double click your scene
+2. make changes
+3. save project as, in your folder.
+4. repeat
+
+Next we will add another scene, before we explore how the process will be modified in the context of a web application that relies on this editor.
+
+### 3. Make a new scene.
+
+Tom ake the pattern more clear, it makes sense to make a second scene.
+
+
 
