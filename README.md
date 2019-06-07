@@ -88,7 +88,7 @@ Make sure you select your newly created `Rainy-Day` folder and proceed. You shou
 📁editor-projects
     📁Rainy-Day
         📁scene
-        |   | albedo.png
+        |   |📄albedo.png
         |   |📄 amiga.jpg
         |   |📄 documentation.png
         |   |📄 environment.dds
@@ -114,9 +114,9 @@ Inside of the `Rainy-Day` Directory there's the `scene` folder with the art and 
 
 Of special note are two files
 
-1. 📜 `scene.babylon` - this is a JSON file that contains all the information about your scene, such as the meshes, cameras, lights and so on. This goes right alongside the assets, like the textures
+1. 📜 `scene.babylon` - this is a simple JSON file that contains all the information about your scene, such as the meshes, cameras, lights and so on. This goes right alongside the assets, like the textures. As you manipulate the meshes and things in your scene, you're basically manipulating the contents of this file.
 
-2. 📜 `scene.editorproject` - this is also a JSON file, and it contains information used by the *editor*. For isntance, the list of the materials, the files list, globalConfigurations, and the current state of the tools, like what is open or closed, or what theme you have.
+2. 📜 `scene.editorproject` - this is also a JSON file, and it contains information used by the *editor itself*. For intance, the manifest of the materials, not just what is in your scene, but everything you've provided to the editor thusfar is in here. Similarly, the files list, global editor configurations, and the current state of the tools, such like what is open or closed, what theme you have  and things like that. As you're clicking about in the editor, you're thusly manipulating the contents of this file.
 
 I encourage you to open them both in your favorite editor (VS Code) and take a look.
 
