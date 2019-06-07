@@ -20,6 +20,7 @@ In short here are our goals:
 After Installing the BabylonJsEditor on your particular platform, open the editor.
 ![image](https://user-images.githubusercontent.com/954596/59078070-05364400-88a3-11e9-82d4-f05da127312c.png)
 
+#### Your First Clicks
 You should see something like the image above. This is the editor in a default state. If at any point you're concerned your editor is not in a default state, a handy tool is the reset button in the `edit` menu. You can click this now, or anytime you need to reset the editor into a default, 'vanilla' state.
 
 ![image](https://user-images.githubusercontent.com/954596/59078164-7118ac80-88a3-11e9-9933-5efb71480333.png)
@@ -30,6 +31,7 @@ The first thing we will do before we go very far is click the button to use the 
 
 This is just an aesthetic decision, but aren't you glad you did that? Dark Themes are awesome.
 
+#### Set Up Folders
 Now we want to make some changes to this project, so we can be sure we're saving and loading the project correctly. Lets prepare our working directory. 
 
 1. First make a folder in a place where you want to put your work. I made a folder called `my-babylonjs-workflow-demo`. This is where we will be saving our entire project. 
@@ -38,6 +40,7 @@ Now we want to make some changes to this project, so we can be sure we're saving
 Your folder structure thusfar will look like this.
 ![image](https://user-images.githubusercontent.com/954596/59078492-ffd9f900-88a4-11e9-9bc3-2834b8ef1d23.png)
 
+#### Small Change in the Mesh Inspector
 Now lets make some trivial changes to the default project. I am going to assign new materials to each mesh in the scene for now. I can start this process by clicking the first sphere in the default project. When you do, you'll see a new menu open on the left. This is the `Inspector`. Now is a good time to briefly describe what this is. 
 
 ![image](https://user-images.githubusercontent.com/954596/59078641-a6be9500-88a5-11e9-830b-6abb9498f5ba.png)
@@ -48,11 +51,24 @@ So for now, just click each sphere, and change the material to something. You cn
 
 ![image](https://user-images.githubusercontent.com/954596/59078888-c2766b00-88a6-11e9-813a-adc6a01c9ded.png)
 
-I just changed the spheres to `Ground`. So they all look the same. Lets say I wanted to do a quick test of this scene before I decide to save. No problem. Just click the `Play` Button at the top.
+I just changed the spheres to `Ground`. So they all look the same. 
+
+#### Checking Your Work
+Lets say I wanted to do a quick test of this scene before I decide to save. No problem. Just click the `Play` Button at the top.
 
 ![image](https://user-images.githubusercontent.com/954596/59078933-fe113500-88a6-11e9-8853-8ada29c50d9d.png)
 
-When you do, you'll see a window appear that plays the current scene. You can even click record, and record a short scene with the camera, by clicking the record button that appeared.
+When you do, you'll see a window appear that plays the current scene. 
 
+#### SideQuest: Make a Movie
+You can even click record, and record a short scene with the camera, by clicking the record button that appeared.
 
+![smallest-gif](https://user-images.githubusercontent.com/954596/59079773-e176fc00-88aa-11e9-98f9-f8822c662279.gif)
 
+You can save this short video, just click `Save Record` and you will get a nice-quality .webm video
+
+![image](https://user-images.githubusercontent.com/954596/59079567-f901b500-88a9-11e9-8958-e30eb3b8bd0e.png)
+
+[You can see the output of this little example here](https://i.imgur.com/V0H8SpK.mp4) (Hosted on Imgur)
+
+#### Save It!
