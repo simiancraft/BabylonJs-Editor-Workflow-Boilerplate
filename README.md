@@ -137,9 +137,9 @@ Make sure you select your newly created `Rainy-Day` folder and proceed. You shou
 3 directories, 17 files
 ```
 
-![image](https://user-images.githubusercontent.com/954596/59080127-d1f8b280-88ac-11e9-8dd5-920a92263117.png)
-
 Inside of the `Rainy-Day` directory, there's the `scene` folder with the art and assets, and just above that is `scene.editorproject`.
+
+![image](https://user-images.githubusercontent.com/954596/59080127-d1f8b280-88ac-11e9-8dd5-920a92263117.png)
 
 Of special note are two files
 
