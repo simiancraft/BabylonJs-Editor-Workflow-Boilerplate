@@ -203,4 +203,4 @@ Next, we will add another scene, before we explore how the process will be modif
 
 ## 3. Make another new scene.
 
-To make the pattern for scene management in a larger project more clear, it makes sense to also make a second scene.
+To make the pattern for scene management in a larger project more clear, it makes sense to also make a second scene, we can also cover some simple editor features.
