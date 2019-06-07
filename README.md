@@ -1,5 +1,19 @@
 # Babylon JS Editor Workflow Boilerplate
 
+- [Babylon JS Editor Workflow Boilerplate](#babylon-js-editor-workflow-boilerplate)
+  - [1. Create Your First Scene](#1-create-your-first-scene)
+    - [Your First Clicks](#your-first-clicks)
+      - [Set Up Folders](#set-up-folders)
+      - [Small Change in the Mesh Inspector](#small-change-in-the-mesh-inspector)
+      - [Checking Your Work](#checking-your-work)
+      - [SideQuest: Make a Movie](#sidequest-make-a-movie)
+      - [Save It!](#save-it)
+    - [2. Iterate on that Scene.](#2-iterate-on-that-scene)
+      - [Remove Documentation Plane and The Graph Tab](#remove-documentation-plane-and-the-graph-tab)
+      - [Manipulate Orbs with the `Preview` Controls](#manipulate-orbs-with-the-preview-controls)
+      - [Nice. Now Resave.](#nice-now-resave)
+    - [3. Make another new scene.](#3-make-another-new-scene)
+
 ---
 
 One of the most important things in working in the BabylonJs Editor system is a reliable and stable workflow. The purpose of this short guide is to jumpstart anyone with the BabylonJs editor, and adopt the recommended workflow.
