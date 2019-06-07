@@ -58,7 +58,11 @@ Lets say I wanted to do a quick test of this scene before I decide to save. No p
 
 ![image](https://user-images.githubusercontent.com/954596/59078933-fe113500-88a6-11e9-8853-8ada29c50d9d.png)
 
-When you do, you'll see a window appear that plays the current scene. 
+When you do, you'll see a window appear that plays the current scene. This is the `Game` Tab
+
+![image](https://user-images.githubusercontent.com/954596/59079912-96111d80-88ab-11e9-92c9-7d11897e7f06.png)
+
+You can see your scene now without the labels, and some basic information in a window, such as the current FPS and the size of the game window. You can use `WASD` and your mouse to fly around with the camera. This is how we think the scene will look.
 
 #### SideQuest: Make a Movie
 You can even click record, and record a short scene with the camera, by clicking the record button that appeared.
