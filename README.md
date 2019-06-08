@@ -245,6 +245,15 @@ You can download this [here if you'd like to try it for yourself](http://alexcpe
 3. 512 is perfectly fine for this to demo, and 1024 looks even nicer!
 4. pick SOURCE, the other formats seem to rearrange the faces of the skybox.
 
+> ---
+>
+> **My Advice:** For now, avoid those really high resolution texture outputs. The raw skybox is a big file, and we're just covering the workflow. Optimizing this asset, such as converting to a .env file is outside the scope of this tutorial. If you're still wanting to know this right now, read more here in the documentation:
+>
+> [Use a HDR environment (for PBR)](https://doc.babylonjs.com/how_to/use_hdr_environment),
+> in particular the section [What is a .env (Tech Deep Dive)](https://doc.babylonjs.com/how_to/use_hdr_environment#what-is-a-env-tech-deep-dive)
+>
+> ---
+
 Now we need to get this up and running. in your new scene, drag the file (mine is `space.dds`) into the `Texture Viewer` tab. When it appears in the list, you'll want to change the Texture 'Coordinates Mode' to `SKYBOX_MODE`
 
 ![image](https://user-images.githubusercontent.com/954596/59141965-c4f6c480-897b-11e9-8b00-fd77b03f1a49.png)
