@@ -276,6 +276,12 @@ When you have the Material, change a couple of properties. Click the new Materia
 
 Now, Just as it was with the `Texture Viewer`, you should see your sphere in the `Materials Viewer` showing the right texture.
 
+Congratulations. This is basically the process for making materials in the editor.
+
+1. Import Textures
+2. Add a Material
+3. Configure both; especially assign the right texture to the material.
+
 We're almost done with a skybox. We need to add a new Cube to the scene. Click `+ Add` in the top menu and when the flyout menu appears, select `Cube Mesh`.
 
 ![image](https://user-images.githubusercontent.com/954596/59149014-a32a2b80-89d5-11e9-9762-2d9725e02888.png)
