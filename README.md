@@ -235,4 +235,19 @@ I won't go into great detail about how to make or generate this file, but the sh
 
 [![space-thing](https://user-images.githubusercontent.com/954596/59141452-de474300-8972-11e9-9655-8dc7d3ef5700.gif)](http://alexcpeterson.com/spacescape/)
 
-You can download this [here if you'd like to try it for yourself](http://alexcpeterson.com/spacescape/), or just get a skybox youself somehow. Spacescape exports directly to .dds format, so its great for testing out this workflow.
+You can download this [here if you'd like to try it for yourself](http://alexcpeterson.com/spacescape/), or just get a skybox youself somehow. Spacescape exports directly to .dds format, so its great for testing out this workflow. The mode oyu need to pick on this particular tool is:
+
+![image](https://user-images.githubusercontent.com/954596/59141888-7e549a80-897a-11e9-9cc7-3381cc2bc4d0.png)
+
+1. pick a name
+2. Single DDs Cube Map (\*.dds)
+3. 512 is perfectly fine for this to demo, and 1024 looks even nicer!
+4. pick SOURCE, the other formats seem to rearrange the faces of the skybox.
+
+Now we need to get this up and running. in your new scene, drag the file (mine is `space.dds`) into the `Texture Viewer` tab. When it appears in the list, you'll want to change the Texture 'Coordinates Mode' to `SKYBOX_MODE`
+
+![image](https://user-images.githubusercontent.com/954596/59141965-c4f6c480-897b-11e9-8b00-fd77b03f1a49.png)
+
+Now you will see your skybox projected onto a sphere in the editor. It should be seamless
+
+![texture-viewer](https://user-images.githubusercontent.com/954596/59141974-f96a8080-897b-11e9-96e9-70a3698d9f44.gif)
