@@ -52,6 +52,12 @@ The first thing we will do before we go very far is clicking the button to use t
 
 This is just an aesthetic decision, but aren't you glad you did that? Dark Themes are awesome.
 
+> ---
+>
+> **My Advice:** You cna always bring up the debugger in an electorn app with `CTRL + ALT + i`. Sometimes things break. You can try resetting the editor, reloading the scene, and opening the debugger to see what is happening. Also don't [forget the helpful people in the babylon forums as well!](https://forum.babylonjs.com)
+>
+> ---
+
 #### Set Up Folders
 
 Now we want to make some changes to this project, so we can be sure we're saving and loading the project correctly. Let's prepare our working directory.
