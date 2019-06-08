@@ -30,6 +30,7 @@ In short here are our goals:
       - [Resave.](#resave)
   - [3. Make another new scene.](#3-make-another-new-scene)
       - [Add Skybox](#add-skybox)
+      - [Save Your Work Thusfar](#save-your-work-thusfar)
 
 ---
 
@@ -306,4 +307,38 @@ Now you should see the skybox all around you! run the game preview tab and take 
 
 ![space-scape](https://user-images.githubusercontent.com/954596/59150588-7bde5900-89eb-11e9-8006-6c1eb931087a.gif)
 
-We have a simple scene with only one skybox, and its a good time to save this scene.
+#### Save Your Work Thusfar
+
+We have a simple scene with only one skybox, and its a good time to save this scene. Just as before, Save this into its own folder, with a sensible name in the folder called `editor-projects`. I jsut called mine `Space-Scene`. Your entireproject directorys tructure thusfar will look (probably) like this:
+
+```bash
+
+`📁 editor-projects
+    📁 Rainy-Day
+    |   📁 scene
+    |   |   |📄 albedo.png
+    |   |   |📄 amiga.jpg
+    |   |   |📄 documentation.png
+    |   |   |📄 environment.dds
+    |   |   |📄 flake.bmp
+    |   |   |📄 flare.png
+    |   |   |📄 mahogfloor_ao.jpg
+    |   |   |📄 mahogfloor_basecolor.png
+    |   |   |📄 mahogfloor_normal.jpg
+    |   |   |📄  rain.jpg
+    |   |   |📄 reflectivity.png
+    |   |   |📄 rustediron2_basecolor.png
+    |   |   |📄 rustediron2_metallic.png
+    |   |   |📄 rustediron2_normal.png
+    |   |   |📄 rustediron2_roughness.png
+    |   |   `📜 scene.babylon
+    |   `📜 scene.editorproject
+    📁 Space-Scene
+        |-- scene
+        |   |📜 scene.babylon
+        |   `📄 space.dds
+        `📜 scene.editorproject
+
+```
+
+As you add more projects, they file in just like this in this editor-projects directory
