@@ -2,9 +2,9 @@
 
 ![image](https://user-images.githubusercontent.com/954596/59084404-b697a280-88c0-11e9-959a-336c0b8d15e2.png)
 
-One of the most important things in working in the BabylonJs Editor system is a reliable and stable workflow. The purpose of this short guide is to jumpstart anyone with the BabylonJs editor, and adopt the recommended workflow.
+One of the most important things in working in the BabylonJs Editor system is a reliable and stable workflow. The purpose of this short guide is to jumpstart anyone with the BabylonJs Editor and adopt the recommended workflow.
 
-Over the course of the next steps, we will be creating a project that can be run in the web where multiple scenes might exist. This is the sort of setup one might encounter if they are, for instance, making a video game with multiple levels or if they are working on a team where different folks might work on the art and the assets from the folks that are working on the code. However, even if you are responsible for every aspect of a project, or if your project doesn't have multiple scenes, this is still the ideal approach to structuring a project so that you can work comfortably with an editor.
+Over the course of the next steps, we will be creating a project that can be run on the web where multiple scenes might exist. This is the sort of setup one might encounter if they are, for instance, making a video game with multiple levels or if they are working on a team where different folks might work on the art and the assets from the folks that are working on the code. However, even if you are responsible for every aspect of a project, or if your project doesn't have multiple scenes, this is still the ideal approach to structuring a project so that you can work comfortably with an editor.
 
 In short here are our goals:
 
@@ -31,6 +31,7 @@ In short here are our goals:
   - [3. Make another new scene.](#3-make-another-new-scene)
       - [Add Skybox](#add-skybox)
       - [Save Your Work Thusfar](#save-your-work-thusfar)
+      - [Put a Bird on it (adding a mesh)](#put-a-bird-on-it-adding-a-mesh)
 
 ---
 
@@ -219,24 +220,24 @@ The editor is in a completely blank state now, and looks like this:
 
 ![image](https://user-images.githubusercontent.com/954596/59134856-5fd2ad00-8942-11e9-9a25-b93d6f2ced38.png)
 
-Lets add some stuff. Since we are in a blank state, it might be useful to cover the ground and the sky, since many scenese use that.
+Let us add some stuff. Since we are in a completely "blank state", it might be useful to cover the ground and the sky, since many scenes use that.
 
 #### Add Skybox
 
-If you looked in the default scene beforehand, you might have notices that the skybox was a special sort of Material and the file it used has a `.dds` extension. The t ype of material is based on Physically Based Rendering (PBR), which is a really cool and powerful feature of BabylonJs. The full scope of this is outside the scope of this editor and workflow tutorial, but
+If you looked in the default scene beforehand, you might have noticed that the skybox was a special sort of Material and the file it used has a `.dds` extension. The type of material is based on Physically Based Rendering (PBR), which is a really cool and powerful feature of BabylonJs. The full scope of this is outside the scope of this editor and workflow tutorial, but
 
 You can also see a demo of the underlying material PBR Material type [here.](<[![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)>)
 [![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)
 
 Also, you can read more in the documentation here: https://doc.babylonjs.com/how_to/physically_based_rendering
 
-Do you see all the reflections in the helmet and the materials, and the added sense of realism? This is the power of PBR. In addition to that fancy helmet mesh, physical based modelling is great for Skyboxes.
+Do you see all the reflections in the helmet and the materials and the added sense of realism? This is the power of PBR. In addition to that fancy helmet mesh, physical based modelling is great for Skyboxes.
 
-I won't go into great detail about how to make or generate this file, but the short version, is that you need a skybox and then you need a way to convert that skybox to the `.dds` format for consumption by BabylonJs. Skyboxes are plentiful on the internet, and one great tool that I used for this tutorial is the Spacescape software by Alex Peterson. Its basically a really cool (and free) piece of software specifically for making space-themed skyboxes.
+I won't go into great detail about how to make or generate this file, but the short version is that you need a skybox and then you need a way to convert that skybox to the `.dds` format for consumption by BabylonJs. Skyboxes are plentiful on the internet, and one great tool that I used for this tutorial is the Spacescape software by Alex Peterson. Its basically a really cool (and free) piece of software specifically for making space-themed skyboxes.
 
 [![space-thing](https://user-images.githubusercontent.com/954596/59141452-de474300-8972-11e9-9655-8dc7d3ef5700.gif)](http://alexcpeterson.com/spacescape/)
 
-You can download this [here if you'd like to try it for yourself](http://alexcpeterson.com/spacescape/), or just get a skybox youself somehow. Spacescape exports directly to .dds format, so its great for testing out this workflow. The mode oyu need to pick on this particular tool is:
+You can download this [here if you'd like to try it for yourself](http://alexcpeterson.com/spacescape/), or just get a skybox yourself somehow. Spacescape exports directly to .dds format, so its great for testing out this workflow. The mode you need to pick on this particular tool is:
 
 ![image](https://user-images.githubusercontent.com/954596/59141888-7e549a80-897a-11e9-9cc7-3381cc2bc4d0.png)
 
@@ -247,7 +248,7 @@ You can download this [here if you'd like to try it for yourself](http://alexcpe
 
 > ---
 >
-> **My Advice:** For now, avoid those really high resolution texture outputs. The raw skybox is a big file, and we're just covering the workflow. Optimizing this asset, such as converting to a .env file is outside the scope of this tutorial. If you're still wanting to know this right now, read more here in the documentation:
+> **My Advice:** For now, avoid those really high-resolution texture outputs. The raw skybox is a big file, and we're just covering the workflow. Optimizing this asset, such as converting to a .env file is outside the scope of this tutorial. If you're still wanting to know this right now, read more here in the documentation:
 >
 > [Use a HDR environment (for PBR)](https://doc.babylonjs.com/how_to/use_hdr_environment),
 > in particular the section [What is a .env (Tech Deep Dive)](https://doc.babylonjs.com/how_to/use_hdr_environment#what-is-a-env-tech-deep-dive)
@@ -299,13 +300,13 @@ We're almost done with a skybox. We need to add a new Cube to the scene. Click `
 
 ![image](https://user-images.githubusercontent.com/954596/59149014-a32a2b80-89d5-11e9-9762-2d9725e02888.png)
 
-At this point you now should see a small gray cube in the scene, and two materials in the `Materials Viewer`. The material called `default material` was addeded alongside the cube.
+At this point, you now should see a small gray cube in the scene and two materials in the `Materials Viewer`. The material called `default material` was added alongside the cube.
 
-Next we need to make this cube much larger to house the scene. In the Inspector window for the cube, in the Properties tab in side there you want to change the scaling to something large, like 500 x 500 x500.
+Next, we need to make this cube much larger to house the scene. In the Inspector window for the cube, look in the Properties tab. Inside there you want to change the scaling to something large, like 500 x 500 x500.
 
 ![image](https://user-images.githubusercontent.com/954596/59149061-7296c180-89d6-11e9-8891-97bc9da77cf7.png)
 
-At this point you will simply have a large gray cube all around you. We need to take small additional steps to make it look like a Skybox. Select the Cube in either the `Graph` tab or just in your `Preview` tab. Now in its inspector:
+At this point, you will simply have a large gray cube all around you. We need to take small additional steps to make it look like a Skybox. Select the Cube in either the `Graph` tab or just in your `Preview` tab. Now in its inspector:
 
 1. give it a sensible name. I named mine `SkyboxSpacescape`
 2. Assign the `SpaceBox` Material to the cube.
@@ -318,7 +319,7 @@ Now you should see the skybox all around you! run the game preview tab and take 
 
 #### Save Your Work Thusfar
 
-We have a simple scene with only one skybox, and its a good time to save this scene. Just as before, Save this into its own folder, with a sensible name in the folder called `editor-projects`. I jsut called mine `Space-Scene`. Your entireproject directorys tructure thusfar will look (probably) like this:
+We have a simple scene with only one skybox, and its a good time to save this scene. Just as before, Save this into its own folder, with a sensible name in the folder called `editor-projects`. I jsut called mine `Space-Scene`. Your entire project directory structure thus far will look (probably) like this:
 
 ```bash
 
@@ -357,3 +358,7 @@ As you add more projects, they file in just like this in this editor-projects di
 > **My Advice:** As you are switching between these projects, at the time of writing this tutorial I want to remind you to pay special attention to always use the `Export Project As ...` option. Be very careful not to write over the wrong project. This will be even more important when we start exporting our scenes for the web application to consume. Just be explicit each time, and no tears will be shed.
 >
 > ---
+
+#### Put a Bird on it (adding a mesh)
+
+Since our second scene is literally only a skybox, I think its probably a good idea to add just one more thing into the scene before we start to go into the workflow related to managing scenes in the context of a web project you plan to publish.
