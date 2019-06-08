@@ -263,14 +263,17 @@ When you do this a windows pops up and make sure to select PBRMaterial.
 When you have the Material, change a couple of properties. Click the new Material and the Inspector Window will be open.
 
 1. Rename the Material to something useful, like `SpaceBox`
+
    ![image](https://user-images.githubusercontent.com/954596/59149092-d1f4d180-89d6-11e9-9b37-10d3630bc798.png)
    You need this to be readable, so you can find it in other places, like when assigning it to a Mesh.
 
 2. We need to Turn Off `Back Face Culling`.
+
    ![image](https://user-images.githubusercontent.com/954596/59149117-25671f80-89d7-11e9-8930-2c1881bed257.png)
    This is what makes the material visible on the inside of the cube, when its surrounding you, so its a very important thing. At the very bottom of the Inspector, there's a checkbox in the Options accordion menu
 
 3. Assign the actual texture!
+
    ![image](https://user-images.githubusercontent.com/954596/59149120-3879ef80-89d7-11e9-892e-eac22e6d26f0.png)
    Just select the `.dds` file you added in the `Reflection Texture` property in the `Reflection` accordion menu of the `Inspector`.
 
@@ -292,4 +295,15 @@ Next we need to make this cube much larger to house the scene. In the Inspector 
 
 ![image](https://user-images.githubusercontent.com/954596/59149061-7296c180-89d6-11e9-8891-97bc9da77cf7.png)
 
-At this point you will simply have a large gray cube all around you. We need to take additional steps to make it look like a Skybox.
+At this point you will simply have a large gray cube all around you. We need to take small additional steps to make it look like a Skybox. Select the Cube in either the `Graph` tab or just in your `Preview` tab. Now in its inspector:
+
+1. give it a sensible name. I named mine `SkyboxSpacescape`
+2. Assign the `SpaceBox` Material to the cube.
+
+![image](https://user-images.githubusercontent.com/954596/59150535-d1fecc80-89ea-11e9-9edb-1cb40a5b2ecf.png)
+
+Now you should see the skybox all around you! run the game preview tab and take a look! It looks nice!
+
+![space-scape](https://user-images.githubusercontent.com/954596/59150588-7bde5900-89eb-11e9-8006-6c1eb931087a.gif)
+
+We have a simple scene with only one skybox, and its a good time to save this scene.
