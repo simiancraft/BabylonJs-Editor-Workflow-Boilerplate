@@ -251,3 +251,11 @@ Now we need to get this up and running. in your new scene, drag the file (mine i
 Now you will see your skybox projected onto a sphere in the editor. It should be seamless
 
 ![texture-viewer](https://user-images.githubusercontent.com/954596/59141974-f96a8080-897b-11e9-96e9-70a3698d9f44.gif)
+
+Now we want to put this texture onto a Material. We will go to the Materials Viewer Tab and click the `+ Add...` Button that is right under the tab name.
+
+![image](https://user-images.githubusercontent.com/954596/59142002-7dbd0380-897c-11e9-80a8-5bc81f92dd43.png)
+
+When you do this a windows pops up and make sure to select PBRMaterial.
+
+![image](https://user-images.githubusercontent.com/954596/59141995-6da52400-897c-11e9-83f1-64810e293129.png)
