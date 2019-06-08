@@ -222,4 +222,11 @@ Lets add some stuff. Since we are in a blank state, it might be useful to cover 
 
 #### Add Skybox
 
-If you looked in the default scene beforehand, you might have notices that the skybox was a special sort of Material and the file it used has a `.dds` extension.
+If you looked in the default scene beforehand, you might have notices that the skybox was a special sort of Material and the file it used has a `.dds` extension. The t ype of material is based on Physically Based Rendering, which is a really cool and powerful feature of BabylonJs. The full scope of this is outside the scope of this editor and workflow tutorial, but you can read more in the documentation here:
+
+https://doc.babylonjs.com/how_to/physically_based_rendering
+
+You can also see a demo of the underlying material PBR Material type [here](<[![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)>):
+[![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)
+
+In addition to that fancy helmet mesh, physical based modelling is great for Skyboxes.
