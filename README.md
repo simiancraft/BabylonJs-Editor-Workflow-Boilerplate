@@ -341,4 +341,10 @@ We have a simple scene with only one skybox, and its a good time to save this sc
 
 ```
 
-As you add more projects, they file in just like this in this editor-projects directory
+As you add more projects, they file in just like this in this editor-projects directory. You can just double click the `scene.editorprojet` icons here to flip-flop back and forth between the scene you're working on.
+
+> ---
+>
+> **My Advice:** As you are switching between these projects, at the time of writing this tutorial I want to remind you to pay special attention to always use the `Export Project As ...` option. Be very careful not to write over the wrong project. This will be even more important when we start exporting our scenes for the web application to consume. Just be explicit each time, and no tears will be shed.
+>
+> ---
