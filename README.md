@@ -222,14 +222,14 @@ Lets add some stuff. Since we are in a blank state, it might be useful to cover 
 
 #### Add Skybox
 
-If you looked in the default scene beforehand, you might have notices that the skybox was a special sort of Material and the file it used has a `.dds` extension. The t ype of material is based on Physically Based Rendering, which is a really cool and powerful feature of BabylonJs. The full scope of this is outside the scope of this editor and workflow tutorial, but
+If you looked in the default scene beforehand, you might have notices that the skybox was a special sort of Material and the file it used has a `.dds` extension. The t ype of material is based on Physically Based Rendering (PBR), which is a really cool and powerful feature of BabylonJs. The full scope of this is outside the scope of this editor and workflow tutorial, but
 
 You can also see a demo of the underlying material PBR Material type [here.](<[![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)>)
 [![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)
 
 Also, you can read more in the documentation here: https://doc.babylonjs.com/how_to/physically_based_rendering
 
-Do you see all the reflections int he helmet and the materials? This is the power of PBR. In addition to that fancy helmet mesh, physical based modelling is great for Skyboxes.
+Do you see all the reflections in the helmet and the materials, and the added sense of realism? This is the power of PBR. In addition to that fancy helmet mesh, physical based modelling is great for Skyboxes.
 
 I won't go into great detail about how to make or generate this file, but the short version, is that you need a skybox and then you need a way to convert that skybox to the `.dds` format for consumption by BabylonJs. Skyboxes are plentiful on the internet, and one great tool that I used for this tutorial is the Spacescape software by Alex Peterson. Its basically a really cool (and free) piece of software specifically for making space-themed skyboxes.
 
@@ -259,3 +259,31 @@ Now we want to put this texture onto a Material. We will go to the Materials Vie
 When you do this a windows pops up and make sure to select PBRMaterial.
 
 ![image](https://user-images.githubusercontent.com/954596/59141995-6da52400-897c-11e9-83f1-64810e293129.png)
+
+When you have the Material, change a couple of properties. Click the new Material and the Inspector Window will be open.
+
+1. Rename the Material to something useful, like `SpaceBox`
+   ![image](https://user-images.githubusercontent.com/954596/59149092-d1f4d180-89d6-11e9-9b37-10d3630bc798.png)
+   You need this to be readable, so you can find it in other places, like when assigning it to a Mesh.
+
+2. We need to Turn Off `Back Face Culling`.
+   ![image](https://user-images.githubusercontent.com/954596/59149117-25671f80-89d7-11e9-8930-2c1881bed257.png)
+   This is what makes the material visible on the inside of the cube, when its surrounding you, so its a very important thing. At the very bottom of the Inspector, there's a checkbox in the Options accordion menu
+
+3. Assign the actual texture!
+   ![image](https://user-images.githubusercontent.com/954596/59149120-3879ef80-89d7-11e9-892e-eac22e6d26f0.png)
+   Just select the `.dds` file you added in the `Reflection Texture` property in the `Reflection` accordion menu of the `Inspector`.
+
+Now, Just as it was with the `Texture Viewer`, you should see your sphere in the `Materials Viewer` showing the right texture.
+
+We're almost done with a skybox. We need to add a new Cube to the scene. Click `+ Add` in the top menu and when the flyout menu appears, select `Cube Mesh`.
+
+![image](https://user-images.githubusercontent.com/954596/59149014-a32a2b80-89d5-11e9-9762-2d9725e02888.png)
+
+At this point you now should see a small gray cube in the scene, and two materials in the `Materials Viewer`. The material called `default material` was addeded alongside the cube.
+
+Next we need to make this cube much larger to house the scene. In the Inspector window for the cube, in the Properties tab in side there you want to change the scaling to something large, like 500 x 500 x500.
+
+![image](https://user-images.githubusercontent.com/954596/59149061-7296c180-89d6-11e9-8891-97bc9da77cf7.png)
+
+At this point you will simply have a large gray cube all around you. We need to take additional steps to make it look like a Skybox.
