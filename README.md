@@ -29,6 +29,7 @@ In short here are our goals:
       - [Manipulate Orbs with the `Preview` Controls](#manipulate-orbs-with-the-preview-controls)
       - [Resave.](#resave)
   - [3. Make another new scene.](#3-make-another-new-scene)
+      - [Add Skybox](#add-skybox)
 
 ---
 
@@ -204,3 +205,21 @@ Next, we will add another scene, before we explore how the process will be modif
 ## 3. Make another new scene.
 
 To make the pattern for scene management in a larger project more clear, it makes sense to also make a second scene, we can also cover some simple editor features.
+
+This time we'll start with a totally new scene.
+
+![image](https://user-images.githubusercontent.com/954596/59134808-2ef27800-8942-11e9-8fbb-35f47ca6ee69.png)
+
+Select 'Yes'
+
+![image](https://user-images.githubusercontent.com/954596/59134825-429dde80-8942-11e9-9f3c-6c21abe97b95.png)
+
+The editor is in a completely blank state now, and looks like this:
+
+![image](https://user-images.githubusercontent.com/954596/59134856-5fd2ad00-8942-11e9-9a25-b93d6f2ced38.png)
+
+Lets add some stuff. Since we are in a blank state, it might be useful to cover the ground and the sky, since many scenese use that.
+
+#### Add Skybox
+
+If you looked in the default scene beforehand, you might have notices that the skybox was a special sort of Material and the file it used has a `.dds` extension.
