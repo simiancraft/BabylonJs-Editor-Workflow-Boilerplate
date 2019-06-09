@@ -423,3 +423,36 @@ Test this with the `play` button, and save it like we have been.
 
 - Open and close both projects
 - Review your folder structure, it should be like this
+
+```bash
+📁 editor-projects
+    📁 Rainy-Day
+    |   📁 scene
+    |   |   |-- albedo.png
+    |   |   |-- amiga.jpg
+    |   |   |-- documentation.png
+    |   |   |-- environment.dds
+    |   |   |-- flake.bmp
+    |   |   |-- flare.png
+    |   |   |-- mahogfloor_ao.jpg
+    |   |   |-- mahogfloor_basecolor.png
+    |   |   |-- mahogfloor_normal.jpg
+    |   |   |-- rain.jpg
+    |   |   |-- reflectivity.png
+    |   |   |-- rustediron2_basecolor.png
+    |   |   |-- rustediron2_metallic.png
+    |   |   |-- rustediron2_normal.png
+    |   |   |-- rustediron2_roughness.png
+    |   |   `📜 scene.babylon
+    |   `📜 scene.editorproject
+    `📁 Space-Scene
+        📁 scene
+        |   |-- 0.jpg
+        |   |-- 1.jpg
+        |   |-- 2.jpg
+        |   |-- 3.jpg
+        |   📜  Dude.babylon
+        |   📜 scene.babylon
+        |   `-- space.dds
+        `📜 scene.editorproject
+```
