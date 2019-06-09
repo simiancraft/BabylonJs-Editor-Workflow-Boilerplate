@@ -33,7 +33,10 @@ In short here are our goals:
       - [Save Your Work Thusfar](#save-your-work-thusfar)
       - [Put a Bird on it (adding a mesh)](#put-a-bird-on-it-adding-a-mesh)
       - [Verify Work Thusfar.](#verify-work-thusfar)
-  - [1. Scaffold a web project](#1-scaffold-a-web-project)
+  - [1. Scaffold and provision a web project](#1-scaffold-and-provision-a-web-project)
+      - [Scaffold basic project](#scaffold-basic-project)
+      - [Verify basic project scaffold](#verify-basic-project-scaffold)
+      - [Provision Multiscene Project](#provision-multiscene-project)
 
 ---
 
@@ -458,9 +461,11 @@ Test this with the `play` button, and save it like we have been.
         `📜 scene.editorproject
 ```
 
-## 1. Scaffold a web project
+## 1. Scaffold and provision a web project
 
-Now we want to establish the other half of our project, the part that will run in the context fo a web application.
+Now we want to establish the other half of our project, the part that will run in the context of a web application.
+
+#### Scaffold basic project
 
 Make a folder at the root of the project called `web-project` this is where all this work will go.
 
@@ -524,6 +529,8 @@ Do you see that there's now a lot of new material sitting in the `web-project` f
 
 This new `project.editorproject` holds some metadata that will be used in the web app that is not used in the editor. Its a different file for a differnt purpose, despite the fact the extension is the same extension.
 
+#### Verify basic project scaffold
+
 As it stand, this scaffold is not completely done and structured the way it will need to be structured to support multiple projects. Nontheless, we can still run a quick test to make sure our work is correct thusfar!
 
 In the root od the `web-project` is where we will open a terminal. for the purposes of this tutorial I am assuming a few things
@@ -545,3 +552,117 @@ This command will do the following:
 
 ![localhost-optimized](https://user-images.githubusercontent.com/954596/59164861-7f9bd980-8ad8-11e9-97b3-36d5cd648480.gif)
 Check [`localhost:1338`](http://localhost:1338/), you should see your scene working.
+
+#### Provision Multiscene Project
+
+We are getting close to establishing our final workflow for a web project with multiple scenes. Now we need to provision the project to support multiple scenes.
+
+1.  simply delete `web-project/scene`. We are going to replace this.
+2.  In its places add a new empty folder caled `scenes`.
+3.  Inside of scenes, make two empty folders that mirror the contents of `editor-projects` Don't just copy the folders over, we need to make two actually empty folders.
+    - make `web-project/scenes/Rainy-Day`
+    - make `web-project/scenes/Space-Scene`
+
+Now our project is basically laid out correctly, but we need to actually put the needed scene assets and files in these projects. We are going to open them, and export them one at a time. Now if your editor is open, just close it so you're starting in the same state as this tutorial.
+
+1. navigate to `editor-project/Rainy-Day` and double-click the `scene.editorproject` to open this in the BabylonJs Editor as we have in the past.
+2. Visually everify you're in the right scene:
+
+![image](https://user-images.githubusercontent.com/954596/59164964-ed94d080-8ad9-11e9-9e0b-389fe87b1c88.png)
+
+3. From the Menu click `Scene` > `Export Final Scene And Assets ...`
+
+![image](https://user-images.githubusercontent.com/954596/59164967-ff767380-8ad9-11e9-95ff-448b1eebe673.png)
+
+4. Select the `.babylon` format, and click `OK`
+
+5. carefully navigate into `web-project/scenes` and choose the `Rainy-Day` folder and Click `Select Folder`
+
+![image](https://user-images.githubusercontent.com/954596/59164991-4e240d80-8ada-11e9-939e-8a51e2add9f6.png)
+
+6. Verify the scene was exported. Your `web-project` will look like this:
+
+```bash
+|-- README.md
+|📁 build
+|   `-- src
+|       |-- game.js
+|       `-- game.js.map
+|-📁 declaration
+|   `-- src
+|       `-- game.d.ts
+|-- index.html
+|📁 node_modules
+|-- package.json
+|📁 scenes
+|   📁 Rainy-Day
+|   |   |-- albedo.png
+|   |   |-- amiga.jpg
+|   |   |-- documentation.png
+|   |   |-- environment.dds
+|   |   |-- flake.bmp
+|   |   |-- flare.png
+|   |   |-- mahogfloor_ao.jpg
+|   |   |-- mahogfloor_basecolor.png
+|   |   |-- mahogfloor_normal.jpg
+|   |   |📜 project.editorproject
+|   |   |-- rain.jpg
+|   |   |-- reflectivity.png
+|   |   |-- rustediron2_basecolor.png
+|   |   |-- rustediron2_metallic.png
+|   |   |-- rustediron2_normal.png
+|   |   |-- rustediron2_roughness.png
+|   |   `-📜 scene.babylon
+|   `📁 Space-Scene
+|-📁 src
+|   `-- game.ts
+|-- tsconfig.json
+`-- yarn.lock
+```
+
+Do this exact same process again for `Space-Scene`. Be careful to navigate to the correct directory.
+
+Notice the `scenes` folder is a little differnt from the ones in `editor-projects`?
+
+The nesting is a little differnt.
+Your project needs to resemble this:
+
+```bash
+📁 editor-projects
+|   📂 Rainy-Day
+|   |   📂 scene
+|   |   |   |-- (assets)
+|   |   |   `-📜 scene.babylon
+|   |   `-📜 scene.editorproject
+|   `📂 Space-Scene
+|       📂 scene
+|       |   |-- (assets)
+|       |   `-📜 scene.babylon
+|       `-📜 scene.editorproject
+`📁 web-project
+    📁 build
+    📁 declaration
+    |   `-- src
+    |       `-- game.d.ts
+    |-- index.html
+    📁 node_modules
+    📁 package.json
+    📁 scenes
+    |   📂 Rainy-Day
+    |   |   |-- (assets)
+    |   |   |📜 project.editorproject
+    |   |   `📜 scene.babylon
+    |   `📂 Space-Scene
+    |       |-- (assets)
+    |       |📜 project.editorproject
+    |       `📜 scene.babylon
+    📁 src
+    |   `-- game.ts
+    |-- tsconfig.json
+    `-- yarn.lock
+```
+
+- In the editor Projects: The Scenes have a `scene.editorproject` at the root, all assets in a `scene` folder.
+- In the web project scenes: The structure is flat, and there is instead a `project.editorproject`.
+
+Now that this is done, we need to make changes to our `game.ts` to handle the new structure.
