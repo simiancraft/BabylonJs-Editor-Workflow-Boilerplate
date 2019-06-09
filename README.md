@@ -32,6 +32,7 @@ In short here are our goals:
       - [Add Skybox](#add-skybox)
       - [Save Your Work Thusfar](#save-your-work-thusfar)
       - [Put a Bird on it (adding a mesh)](#put-a-bird-on-it-adding-a-mesh)
+      - [Verify Work Thusfar.](#verify-work-thusfar)
 
 ---
 
@@ -386,16 +387,39 @@ The short version is, look in [this repo](https://github.com/BabylonJS/Exporters
 >
 > ---
 
-We have a space-scene
+We have a space-scene, so lets add a space-dude. In order to do this, you will need the `.babylon` file, which is a JSOn file describing the mesh as well as all the textures. Here is an example of this mesh in a babylon playground.
 
--
+- [Babylon.js Playground](https://www.babylonjs-playground.com/#NA2WKW)
 
-Here comes the hard part. After you download the file.... You just drag it in. That's it. Drag it in the editor.
+Here are all the assets you need, download them all somehere.
 
-You'll get a prompt.
+**Dude.babylon**
 
-Yes. Append it. Wait for the loading to stop. And then you'll see some changes.
+- Mesh: https://www.babylonjs-playground.com/scenes/Dude/Dude.babylon
+- Asset: https://www.babylonjs-playground.com/scenes/Dude/0.jpg
+- Asset: https://www.babylonjs-playground.com/scenes/Dude/1.jpg
+- Asset: https://www.babylonjs-playground.com/scenes/Dude/2.jpg
+- Asset: https://www.babylonjs-playground.com/scenes/Dude/3.jpg
+
+I would put them all in a folder called 'Dude' on your computer. Like this:
+![image](https://user-images.githubusercontent.com/954596/59163223-b6b3c000-8ac3-11e9-875c-96f5e788eec0.png)
+
+Here comes the hard part. After you download the file and the assets.. you drag them all into the editor and click `yes` on the prompt.
+![dragdude-2](https://user-images.githubusercontent.com/954596/59163281-69841e00-8ac4-11e9-9046-abe766eef6f2.gif)
 
 - There's a lot more Textures in the `Texture viewer`!
+  ![image](https://user-images.githubusercontent.com/954596/59163440-f4feae80-8ac6-11e9-9489-ca185c3facd9.png)
+- Same with the `Material Viewer`
+  ![image](https://user-images.githubusercontent.com/954596/59163433-d26c9580-8ac6-11e9-9a9c-a3873da9c43b.png)
 - There's a new node in the `Graph`
-- There's a ??? in the `Preview` tab.
+- They might be extra cameras in the `Graph`, you can delete them. You want something like this:
+  ![image](https://user-images.githubusercontent.com/954596/59163410-79046680-8ac6-11e9-8fdb-f2aecacfd21f.png)
+- There's a Mesh in the `Preview` tab.
+
+Test this with the `play` button, and save it like we have been.
+![fly-dude](https://user-images.githubusercontent.com/954596/59163473-5888dc00-8ac7-11e9-8b6b-00a103e9bd71.gif)
+
+#### Verify Work Thusfar.
+
+- Open and close both projects
+- Review your folder structure, it should be like this
