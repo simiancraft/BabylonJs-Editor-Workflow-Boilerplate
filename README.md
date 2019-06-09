@@ -33,6 +33,7 @@ In short here are our goals:
       - [Save Your Work Thusfar](#save-your-work-thusfar)
       - [Put a Bird on it (adding a mesh)](#put-a-bird-on-it-adding-a-mesh)
       - [Verify Work Thusfar.](#verify-work-thusfar)
+  - [1. Scaffold a web project](#1-scaffold-a-web-project)
 
 ---
 
@@ -456,3 +457,91 @@ Test this with the `play` button, and save it like we have been.
         |   `-- space.dds
         `📜 scene.editorproject
 ```
+
+## 1. Scaffold a web project
+
+Now we want to establish the other half of our project, the part that will run in the context fo a web application.
+
+Make a folder at the root of the project called `web-project` this is where all this work will go.
+
+![image](https://user-images.githubusercontent.com/954596/59164660-a0aefb00-8ad5-11e9-9950-1c80636c0229.png)
+
+Currently, this folder is empty. We need to scaffold the initial project that will go in here. Open the first project in the `Rainy-Day` folder. your scene should load right up as it you had left it. This time we will select a differnt menu option in the `Project` menu than before.
+
+![image](https://user-images.githubusercontent.com/954596/59164670-dc49c500-8ad5-11e9-92ae-c19c760e7fdc.png)
+
+1. Click `Export Project Template...`
+2. select `.babylon` format, and hit `Ok`
+3. navigate to the `web-project` fold you just created
+
+Your folder structure will look like this now:
+
+```bash
+.
+📁 editor-projects
+|   📁 Rainy-Day
+|   |   📁 scene
+|   |   |   | (... assets)
+|   |   |   `-- scene.babylon
+|   |   `📜 scene.editorproject
+|   `📁 Space-Scene
+|       📁 scene
+|       |   | (... assets)
+|       |   `-- space.dds
+|       `📜  scene.editorproject
+📁  web-project
+    |-- README.md
+    |-- index.html
+    |-- package.json
+    📁  scene
+    |   |-- albedo.png
+    |   |-- amiga.jpg
+    |   |-- documentation.png
+    |   |-- environment.dds
+    |   |-- flake.bmp
+    |   |-- flare.png
+    |   |-- mahogfloor_ao.jpg
+    |   |-- mahogfloor_basecolor.png
+    |   |-- mahogfloor_normal.jpg
+    |   |📜 project.editorproject
+    |   |-- rain.jpg
+    |   |-- reflectivity.png
+    |   |-- rustediron2_basecolor.png
+    |   |-- rustediron2_metallic.png
+    |   |-- rustediron2_normal.png
+    |   |-- rustediron2_roughness.png
+    |   `📜 scene.babylon
+    📁 src
+    |   `📜  game.ts
+    `📜 tsconfig.json
+```
+
+Do you see that there's now a lot of new material sitting in the `web-project` folder. Additionally, there is a folder called `scene` that has dumped all the files from the `Raindy-Day` scene into here. There are some things to point out
+
+- the `scene.babylon` is the same as the one in the `Rainy-Day`.
+- there is no `scene.editorproject` file at all! There will never be one in this part of the file structure
+- there is a _new_ `project.editorproject` file that is not in the `editor-projects` folder. there will always be one of these in each scene in the `web-project` section and **not** in the `editor-projects` section of this whole big project.
+
+This new `project.editorproject` holds some metadata that will be used in the web app that is not used in the editor. Its a different file for a differnt purpose, despite the fact the extension is the same extension.
+
+As it stand, this scaffold is not completely done and structured the way it will need to be structured to support multiple projects. Nontheless, we can still run a quick test to make sure our work is correct thusfar!
+
+In the root od the `web-project` is where we will open a terminal. for the purposes of this tutorial I am assuming a few things
+
+1. you already have some familiarity with a javascritpt web project. You understand what a `package.json` is and what `node_modules` are. If you don't, spend some time to read up on that. The web is very full of good resources about this, and that's out of scope of this tutorial.
+2. your environment is already provisioned to run `node` and either `yarn` or `npm`. For this tutorial I am using `yarn`, but `npm` works just as well!
+
+In the `web-project` directory run this command in a proper terminal:
+
+```bash
+yarn install && yarn build && yarn run webserver
+```
+
+This command will do the following:
+
+1. `yarn install` - install your dependencies into the `node_modules` directory, as you'd expect
+2. `yarn build` - create a distributable build of the _typescript files only_ in the `build` folder. This means it does not copy assets, just makes the javascript.
+3. `yarn run webserver` - start up a static webserver on port `1338`. You can now see your project running on [`localhost:1338`](http://localhost:1338/).
+
+![localhost-optimized](https://user-images.githubusercontent.com/954596/59164861-7f9bd980-8ad8-11e9-97b3-36d5cd648480.gif)
+Check [`localhost:1338`](http://localhost:1338/), you should see your scene working.
