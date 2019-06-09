@@ -368,3 +368,34 @@ As you add more projects, they file in just like this in this editor-projects di
 #### Put a Bird on it (adding a mesh)
 
 Since our second scene is literally only a skybox, I think its probably a good idea to add just one more thing into the scene before we start to go into the workflow related to managing scenes in the context of a web project you plan to publish.
+
+The folks working on babylon have provided some really nice meshes that are basically ready-to-go that we can experiment with. Since this tutorial is more about workflow and less about making your own custom meshes, we can just use one of these.
+
+The easiest way to get the meshes is to look at the CDN and jsut download it. That CDN is `https://models.babylonjs.com/`, and it holds meshes in a variety of formats (including .babylon). You can read more about Mesh type support [here](https://doc.babylonjs.com/how_to/load_from_any_file_type) when you feel like you need to know more. There is a page that lists eveyr mesh that's available to work with
+
+- [https://doc.babylonjs.com/resources/meshes_to_load](https://doc.babylonjs.com/resources/meshes_to_load)
+
+Also, if you already work in a program for mesh creation, such as Blender, 3ds Max, Cheetah 3d and so on, there's probably an exporter you can install to make this very easy for you. There's a bunch of articles on this in the [Resources](https://doc.babylonjs.com/resources/) section of the BabylonJs Docs.
+
+[![image](https://user-images.githubusercontent.com/954596/59151226-12fbde80-89f5-11e9-8e12-fd25c8d7b032.png)](https://github.com/BabylonJS/Exporters)
+The short version is, look in [this repo](https://github.com/BabylonJS/Exporters) to see if there's an exporter for your favorite mesh editor. It is probably supported.
+
+> ---
+>
+> **My Advice:** The editor supports many types of textures, but after working with it for some time, the only format I am recoomending you use (in the short term) is the `.babylon` format. You can see more [in this thread](https://forum.babylonjs.com/t/babylonjs-editor-importing-meshes-working-lifecycle/3770). This is fine if you are going to be using `.babylon` exporters in your mesh editor of choice
+>
+> ---
+
+We have a space-scene
+
+-
+
+Here comes the hard part. After you download the file.... You just drag it in. That's it. Drag it in the editor.
+
+You'll get a prompt.
+
+Yes. Append it. Wait for the loading to stop. And then you'll see some changes.
+
+- There's a lot more Textures in the `Texture viewer`!
+- There's a new node in the `Graph`
+- There's a ??? in the `Preview` tab.
