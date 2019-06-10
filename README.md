@@ -38,6 +38,7 @@ In short here are our goals:
       - [Verify basic project scaffold](#verify-basic-project-scaffold)
       - [Provision Multiscene Project](#provision-multiscene-project)
       - [The Final Workflow](#the-final-workflow)
+      - [For Next time: What wasn't covered (but might come in the future)](#for-next-time-what-wasnt-covered-but-might-come-in-the-future)
 
 ---
 
@@ -902,3 +903,24 @@ Check the Space Scene. Use `F12` to open the inspector. If you get the same scen
   ![image](https://user-images.githubusercontent.com/954596/59168991-f3041200-8afd-11e9-8b0c-928b7186c8de.png)
 
 #### The Final Workflow
+
+Now, henceforth, you should follow this workflow carefully.
+
+1. To open a scene, always double click the `scene.editorproject` in the right scene folder in the `editor-projects`
+2. Also, start up the webserver from the `web-project` directory.
+3. Make whatever changes you wish in the editor. When it looks right in the editor
+   - carefully use `Project` > `Save Project As...` and navigate to the Scene folder in `editor-projects`
+   - use `Scene` > `Export Final Scene and Assets...` and navigate to the Scene folder in `web-project`
+
+More tips:
+
+- _Never_ try to load from the files in the `web-project`
+- the files in the `web-project` are effectively are _output only_. It is essentially no differnt than a build folder.
+- If the artists wish to keep multiple versions of scenes, then it is their responsibility to make the right folders in the `editor-projects`.
+- Exporting to the `web-project` will show changes in the web-app right away, but if you close the editor before you saved in `editor projects` your changes might be gone. If you like what you see, carefulyl export to both.
+- Honestly? Don't use `CTRL + S` if you are switching between projects, or if you are working in the editor project and periodically exporting to the web-project. The GUI/path always remembers whatever was used last. You might stomp over a project, that or accidentally save your editor-project stuff in the web-project. Just Always use `Save As...` until this is changes.
+
+#### For Next time: What wasn't covered (but might come in the future)
+
+- How to access and manipulate things in the scene.babylon from the game.tx (code-first).
+- How to change scenes, like in a video game.
