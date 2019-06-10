@@ -37,7 +37,7 @@ In short here are our goals:
       - [Scaffold basic project](#scaffold-basic-project)
       - [Verify basic project scaffold](#verify-basic-project-scaffold)
       - [Provision Multiscene Project](#provision-multiscene-project)
-      - [The Final Workflow](#the-final-workflow)
+  - [5. The Final Workflow](#5-the-final-workflow)
       - [For Next time: What wasn't covered (but might come in the future)](#for-next-time-what-wasnt-covered-but-might-come-in-the-future)
 
 ---
@@ -902,7 +902,7 @@ Check the Space Scene. Use `F12` to open the inspector. If you get the same scen
 - make sure to disable caching in the inspector
   ![image](https://user-images.githubusercontent.com/954596/59168991-f3041200-8afd-11e9-8b0c-928b7186c8de.png)
 
-#### The Final Workflow
+## 5. The Final Workflow
 
 Now, henceforth, you should follow this workflow carefully.
 
