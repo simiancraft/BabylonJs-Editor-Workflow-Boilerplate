@@ -2,10 +2,12 @@
 
 ![image](https://user-images.githubusercontent.com/954596/59084404-b697a280-88c0-11e9-959a-336c0b8d15e2.png)
 
+> ** **
+> - Author: *Jesse Harlin* (info[at]simiancraft.com)
+> - Author Twitter: [*@5imian*](https://twitter.com/5imian)
+> - Author Site: [jesseharlin.net](http://jesseharlin.net/)
+> ** **
 
-- By: *Jesse Harlin* (info[at]simiancraft.com)
-- Twitter: [*@5imian*](https://twitter.com/5imian)
-- Site: [jesseharlin.net](http://jesseharlin.net/)
 
 One of the most important things in working in the BabylonJs Editor system is a reliable and stable workflow. The purpose of this short guide is to jumpstart anyone with the BabylonJs Editor and adopt the recommended workflow.
 
