@@ -1,3 +1,8 @@
+import "babylonjs-materials";
+import "babylonjs-procedural-textures";
+import "babylonjs-loaders";
+import "babylonjs-gui";
+
 import {
   CannonJSPlugin,
   Engine,
@@ -9,7 +14,7 @@ import {
 
 import { Extensions } from "babylonjs-editor";
 
-export default class Game {
+class Game {
   public engine: Engine;
   public canvas: HTMLCanvasElement = <HTMLCanvasElement>(
     document.getElementById("renderCanvas")
@@ -22,9 +27,9 @@ export default class Game {
   }
 
   public run(): void {
-    //const rainyDay = `./scenes/Rainy-Day/`;
-    const spaceScene = `./scenes/Space-Scene/`;
-    let currentScene = spaceScene;
+    const rainyDay = `./scenes/Rainy-Day/`;
+    //const spaceScene = `./scenes/Space-Scene/`;
+    let currentScene = rainyDay;
 
     SceneLoader.Load(
       `${currentScene}`,
@@ -53,3 +58,5 @@ export default class Game {
     );
   }
 }
+
+export default Game;

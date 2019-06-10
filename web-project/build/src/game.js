@@ -1,5 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+require("babylonjs-materials");
+require("babylonjs-procedural-textures");
+require("babylonjs-loaders");
+require("babylonjs-gui");
 var babylonjs_1 = require("babylonjs");
 var babylonjs_editor_1 = require("babylonjs-editor");
 var Game = /** @class */ (function () {
@@ -12,9 +16,9 @@ var Game = /** @class */ (function () {
     }
     Game.prototype.run = function () {
         var _this = this;
-        //const rainyDay = `./scenes/Rainy-Day/`;
-        var spaceScene = "./scenes/Space-Scene/";
-        var currentScene = spaceScene;
+        var rainyDay = "./scenes/Rainy-Day/";
+        //const spaceScene = `./scenes/Space-Scene/`;
+        var currentScene = rainyDay;
         babylonjs_1.SceneLoader.Load("" + currentScene, "scene.babylon", this.engine, function (scene) {
             _this.scene = scene;
             console.log(_this.scene);

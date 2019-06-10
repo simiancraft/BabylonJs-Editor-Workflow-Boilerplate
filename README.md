@@ -923,5 +923,5 @@ Now, henceforth, you should follow this workflow carefully.
 
 #### For Next time: What wasn't covered (but might come in the future)
 
-- How to access and manipulate things in the scene.babylon from the game.tx (code-first).
+- How to access and manipulate things in the scene.babylon from the game.ts (code-first).
 - How to change scenes, like in a video game.
