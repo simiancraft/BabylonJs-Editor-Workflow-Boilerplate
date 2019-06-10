@@ -32,7 +32,7 @@ In short here are our goals:
       - [Add Skybox](#add-skybox)
       - [Save Your Work Thusfar](#save-your-work-thusfar)
       - [Put a Bird on it (adding a mesh)](#put-a-bird-on-it-adding-a-mesh)
-      - [Verify Work Thusfar.](#verify-work-thusfar)
+      - [Verify Work Thus Far.](#verify-work-thus-far)
   - [4. Scaffold and provision a web project](#4-scaffold-and-provision-a-web-project)
       - [Scaffold basic project](#scaffold-basic-project)
       - [Verify basic project scaffold](#verify-basic-project-scaffold)
@@ -61,16 +61,16 @@ This is just an aesthetic decision, but aren't you glad you did that? Dark Theme
 
 > ---
 >
-> **My Advice:** You cna always bring up the debugger in an electorn app with `CTRL + ALT + i`. Sometimes things break. You can try resetting the editor, reloading the scene, and opening the debugger to see what is happening. Also don't [forget the helpful people in the babylon forums as well!](https://forum.babylonjs.com)
+> **My Advice:** You can always bring up the debugger in an electron app with `CTRL + ALT + I`. Sometimes things break. You can try resetting the editor, reloading the scene, and opening the debugger to see what is happening. Also, don't [forget the helpful people in the Babylon forums as well!](https://forum.babylonjs.com)
 >
 > ---
 
 #### Set Up Folders
 
-Now we want to make some changes to this project, so we can be sure we're saving and loading the project correctly. Let's prepare our working directory.
+Now we want to make some changes to this project, so we can be sure we're saving and loading the project correctly. Let's prepare the working directory.
 
-1. First, make a folder in a place where you want to put your work. I made a folder called `my-babylonjs-workflow-demo`. This is where we will be saving our entire project.
-2. Inside of this folder, make another folder called `editor-projects`. This is where we are going to save the Babylonjs Editor Projects. This is the place the person or persons who work on the art and the scenes will be working iteratively.
+1. First, make a folder in a place where you want to put your work. I made a folder called "`my-babylonjs-workflow-demo`". This is where we will be saving our entire project.
+2. Inside of this folder, make another folder called `editor-projects`. This is where we are going to save the BabylonJs Editor Projects. This is the place the person or persons who work on the art and the scenes will be working iteratively.
 
 Your folder structure thus far will look like this.
 ![image](https://user-images.githubusercontent.com/954596/59078492-ffd9f900-88a4-11e9-9bc3-2834b8ef1d23.png)
@@ -237,7 +237,7 @@ Let us add some stuff. Since we are in a completely "blank state", it might be u
 
 #### Add Skybox
 
-If you looked in the default scene beforehand, you might have noticed that the skybox was a special sort of Material and the file it used has a `.dds` extension. The type of material is based on Physically Based Rendering (PBR), which is a really cool and powerful feature of BabylonJs. The full scope of this is outside the scope of this editor and workflow tutorial, but
+If you looked in the default scene beforehand, you might have noticed that the skybox was a special sort of Material and the file used has a `.dds` extension. The type of material is based on Physically Based Rendering (PBR), which is a really cool and powerful feature of BabylonJs. The full scope of this is outside the scope of this editor and workflow tutorial, but
 
 You can also see a demo of the underlying material PBR Material type [here.](<[![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)>)
 [![image](https://user-images.githubusercontent.com/954596/59141279-63c8f400-896f-11e9-9f2a-177b451f069f.png)](https://www.babylonjs.com/demos/pbrglossy/)
@@ -250,7 +250,7 @@ I won't go into great detail about how to make or generate this file, but the sh
 
 [![space-thing](https://user-images.githubusercontent.com/954596/59141452-de474300-8972-11e9-9655-8dc7d3ef5700.gif)](http://alexcpeterson.com/spacescape/)
 
-You can download this [here if you'd like to try it for yourself](http://alexcpeterson.com/spacescape/), or just get a skybox yourself somehow. Spacescape exports directly to .dds format, so its great for testing out this workflow. The mode you need to pick on this particular tool is:
+You can download this [here if you'd like to try it for yourself](http://alexcpeterson.com/spacescape/), or just get a skybox yourself somehow. Spacescape exports directly to .dds format, so it is great for testing out this workflow. The mode you need to pick on this particular tool is:
 
 ![image](https://user-images.githubusercontent.com/954596/59141888-7e549a80-897a-11e9-9cc7-3381cc2bc4d0.png)
 
@@ -332,7 +332,7 @@ Now you should see the skybox all around you! run the game preview tab and take 
 
 #### Save Your Work Thusfar
 
-We have a simple scene with only one skybox, and its a good time to save this scene. Just as before, Save this into its own folder, with a sensible name in the folder called `editor-projects`. I jsut called mine `Space-Scene`. Your entire project directory structure thus far will look (probably) like this:
+We have a simple scene with only one skybox, and its a good time to save this scene. Just as before, Save this into its own folder, with a sensible name in the folder called `editor-projects`. I just called mine `Space-Scene`. Your entire project directory structure thus far will look (probably) like this:
 
 ```bash
 
@@ -376,9 +376,9 @@ As you add more projects, they file in just like this in this editor-projects di
 
 Since our second scene is literally only a skybox, I think its probably a good idea to add just one more thing into the scene before we start to go into the workflow related to managing scenes in the context of a web project you plan to publish.
 
-The folks working on babylon have provided some really nice meshes that are basically ready-to-go that we can experiment with. Since this tutorial is more about workflow and less about making your own custom meshes, we can just use one of these.
+The folks working on Babylon have provided some really nice meshes that are basically ready-to-go that we can experiment with. Since this tutorial is more about workflow and less about making your own custom meshes, we can just use one of these.
 
-The easiest way to get the meshes is to look at the CDN and jsut download it. That CDN is `https://models.babylonjs.com/`, and it holds meshes in a variety of formats (including .babylon). You can read more about Mesh type support [here](https://doc.babylonjs.com/how_to/load_from_any_file_type) when you feel like you need to know more. There is a page that lists eveyr mesh that's available to work with
+The easiest way to get the meshes is to look at the CDN and just download it. That CDN is `https://models.babylonjs.com/`, and it holds meshes in a variety of formats (including .babylon). You can read more about Mesh type support [here](https://doc.babylonjs.com/how_to/load_from_any_file_type) when you feel like you need to know more. There is a page that lists every mesh that's available to work with
 
 - [https://doc.babylonjs.com/resources/meshes_to_load](https://doc.babylonjs.com/resources/meshes_to_load)
 
@@ -389,15 +389,15 @@ The short version is, look in [this repo](https://github.com/BabylonJS/Exporters
 
 > ---
 >
-> **My Advice:** The editor supports many types of textures, but after working with it for some time, the only format I am recoomending you use (in the short term) is the `.babylon` format. You can see more [in this thread](https://forum.babylonjs.com/t/babylonjs-editor-importing-meshes-working-lifecycle/3770). This is fine if you are going to be using `.babylon` exporters in your mesh editor of choice
+> **My Advice:** The editor supports many types of textures, but after working with it for some time, the only format I am recommending you use (in the short term) is the `.babylon` format. You can see more [in this thread](https://forum.babylonjs.com/t/babylonjs-editor-importing-meshes-working-lifecycle/3770). This is fine if you are going to be using `.babylon` exporters in your mesh editor of choice
 >
 > ---
 
-We have a space-scene, so lets add a space-dude. In order to do this, you will need the `.babylon` file, which is a JSOn file describing the mesh as well as all the textures. Here is an example of this mesh in a babylon playground.
+We have a space-scene, so let us add a space-dude. In order to do this, you will need the `.babylon` file, which is a JSON file describing the mesh as well as all the textures. Here is an example of this mesh in a Babylon playground.
 
 - [Babylon.js Playground](https://www.babylonjs-playground.com/#NA2WKW)
 
-Here are all the assets you need, download them all somehere.
+Here are all the assets you need, download them all somewhere.
 
 **Dude.babylon**
 
@@ -413,7 +413,7 @@ I would put them all in a folder called 'Dude' on your computer. Like this:
 Here comes the hard part. After you download the file and the assets.. you drag them all into the editor and click `yes` on the prompt.
 ![dragdude-2](https://user-images.githubusercontent.com/954596/59163281-69841e00-8ac4-11e9-9046-abe766eef6f2.gif)
 
-- There's a lot more Textures in the `Texture viewer`!
+- There are a lot more Textures in the `Texture viewer`!
   ![image](https://user-images.githubusercontent.com/954596/59163440-f4feae80-8ac6-11e9-9489-ca185c3facd9.png)
 - Same with the `Material Viewer`
   ![image](https://user-images.githubusercontent.com/954596/59163433-d26c9580-8ac6-11e9-9a9c-a3873da9c43b.png)
@@ -422,10 +422,10 @@ Here comes the hard part. After you download the file and the assets.. you drag 
   ![image](https://user-images.githubusercontent.com/954596/59163410-79046680-8ac6-11e9-8fdb-f2aecacfd21f.png)
 - There's a Mesh in the `Preview` tab.
 
-Test this with the `play` button, and save it like we have been.
+Test this with the `play` button, and save it as we have been.
 ![fly-dude](https://user-images.githubusercontent.com/954596/59163473-5888dc00-8ac7-11e9-8b6b-00a103e9bd71.gif)
 
-#### Verify Work Thusfar.
+#### Verify Work Thus Far.
 
 - Open and close both projects
 - Review your folder structure, it should be like this
@@ -473,7 +473,7 @@ Make a folder at the root of the project called `web-project` this is where all 
 
 ![image](https://user-images.githubusercontent.com/954596/59164660-a0aefb00-8ad5-11e9-9950-1c80636c0229.png)
 
-Currently, this folder is empty. We need to scaffold the initial project that will go in here. Open the first project in the `Rainy-Day` folder. your scene should load right up as it you had left it. This time we will select a differnt menu option in the `Project` menu than before.
+Currently, this folder is empty. We need to scaffold the initial project that will go in here. Open the first project in the `Rainy-Day` folder. your scene should load right up as where you had left it. This time we will select a different menu option in the `Project` menu than before.
 
 ![image](https://user-images.githubusercontent.com/954596/59164670-dc49c500-8ad5-11e9-92ae-c19c760e7fdc.png)
 
@@ -523,21 +523,21 @@ Your folder structure will look like this now:
     `📜 tsconfig.json
 ```
 
-Do you see that there's now a lot of new material sitting in the `web-project` folder. Additionally, there is a folder called `scene` that has dumped all the files from the `Raindy-Day` scene into here. There are some things to point out
+Do you see that there's now a lot of new material sitting in the `web-project` folder? Additionally, there is a folder called `scene` that has dumped all the files from the `Rainy-Day` scene into here. There are some things to point out
 
 - the `scene.babylon` is the same as the one in the `Rainy-Day`.
 - there is no `scene.editorproject` file at all! There will never be one in this part of the file structure
-- there is a _new_ `project.editorproject` file that is not in the `editor-projects` folder. there will always be one of these in each scene in the `web-project` section and **not** in the `editor-projects` section of this whole big project.
+- there is a new `project.editorproject` file that is not in the `editor-projects` folder. there will always be one of these in each scene in the `web-project` section and **not** in the `editor-projects` section of this whole big project.
 
-This new `project.editorproject` holds some metadata that will be used in the web app that is not used in the editor. Its a different file for a differnt purpose, despite the fact the extension is the same extension.
+This new `project.editorproject` holds some metadata that will be used in the web app that is not used in the editor. Its a different file for a different purpose, despite the fact the extension is the same extension.
 
 #### Verify basic project scaffold
 
-As it stand, this scaffold is not completely done and structured the way it will need to be structured to support multiple projects. Nontheless, we can still run a quick test to make sure our work is correct thusfar!
+As it stands, this scaffold is not completely done and structured the way it will need to be structured to support multiple projects. Nonetheless, we can still run a quick test to make sure our work is correct thus far!
 
-In the root od the `web-project` is where we will open a terminal. for the purposes of this tutorial I am assuming a few things
+In the root of the `web-project` is where we will open a terminal. for the purposes of this tutorial, I am assuming a few things
 
-1. you already have some familiarity with a javascritpt web project. You understand what a `package.json` is and what `node_modules` are. If you don't, spend some time to read up on that. The web is very full of good resources about this, and that's out of scope of this tutorial.
+1. you already have some familiarity with a javascript web project. You understand what a `package.json` is and what `node_modules` are. If you don't, spend some time to read up on that. The web is very full of good resources about this, and that's out of the scope of this tutorial.
 2. your environment is already provisioned to run `node` and either `yarn` or `npm`. For this tutorial I am using `yarn`, but `npm` works just as well!
 
 In the `web-project` directory run this command in a proper terminal:
@@ -557,18 +557,18 @@ Check [`localhost:1338`](http://localhost:1338/), you should see your scene work
 
 #### Provision Multiscene Project
 
-We are getting close to establishing our final workflow for a web project with multiple scenes. Now we need to provision the project to support multiple scenes.
+We are getting close to establishing our final workflow for a web project with multiple scenes. Now we need to provision our project to support multiple scenes.
 
 1.  simply delete `web-project/scene`. We are going to replace this.
-2.  In its places add a new empty folder caled `scenes`.
+2.  In its places add a new empty folder called `scenes`.
 3.  Inside of scenes, make two empty folders that mirror the contents of `editor-projects` Don't just copy the folders over, we need to make two actually empty folders.
     - make `web-project/scenes/Rainy-Day`
     - make `web-project/scenes/Space-Scene`
 
-Now our project is basically laid out correctly, but we need to actually put the needed scene assets and files in these projects. We are going to open them, and export them one at a time. Now if your editor is open, just close it so you're starting in the same state as this tutorial.
+Now our project is basically laid out correctly, but we need to actually put the needed scene assets and files in these projects. We are going to open them and export them one at a time. Now if your editor is open, just close it so you're starting in the same state as this tutorial.
 
 1. navigate to `editor-project/Rainy-Day` and double-click the `scene.editorproject` to open this in the BabylonJs Editor as we have in the past.
-2. Visually everify you're in the right scene:
+2. Visually verify you're in the right scene:
 
 ![image](https://user-images.githubusercontent.com/954596/59164964-ed94d080-8ad9-11e9-9e0b-389fe87b1c88.png)
 
@@ -624,9 +624,9 @@ Now our project is basically laid out correctly, but we need to actually put the
 
 Do this exact same process again for `Space-Scene`. Be careful to navigate to the correct directory.
 
-Notice the `scenes` folder is a little differnt from the ones in `editor-projects`?
+Notice the `scenes` folder is a little different from the ones in `editor-projects`?
 
-The nesting is a little differnt.
+The nesting is a little different.
 Your project needs to resemble this:
 
 ```bash
@@ -756,7 +756,7 @@ I want to draw attention to a couple of particular spots, to understand this fil
   }
 ```
 
-This is the constructor, and there's not much to it, except it creates the engine and also make the engine work with resizing the window.
+This is the constructor, and there's not much to it, except it creates the engine and also makes the engine work with resizing the window.
 
 ```ts
 SceneLoader.Load(
@@ -771,7 +771,7 @@ SceneLoader.Load(
 );
 ```
 
-In this closure, we essentially run the scene when the Game is done with the constructor. Right now, you can see this is clearly pointing to the wrong place, its pointing to the way the folders looked before we changed things. When this works this will eb responsible for things like
+In this closure, we essentially run the scene when the Game is done with the constructor. Right now, you can see this is clearly pointing to the wrong place, its pointing to the way the folders looked before we changed things. When this works this will be responsible for things like
 
 - meshes
 - cameras
@@ -789,7 +789,7 @@ if (!this.scene.activeCamera) {
 this.scene.activeCamera.attachControl(this.canvas, true);
 ```
 
-This is just some code to make sure the camera is there, and works. If for some reason you saved a scene without an active camera it will make one for you.
+This is just some code to make sure the camera is there and works. If for some reason you saved a scene without an active camera it will make one for you.
 
 ```ts
 Tools.LoadFile("./scene/project.editorproject", (data: string) => {
@@ -804,21 +804,21 @@ Tools.LoadFile("./scene/project.editorproject", (data: string) => {
 });
 ```
 
-After the scene is loaded, this is the second async event in the boilerplate. We then need to load that `project.editorproject` file, and then it basically decorates the cene with some additional information in this file. This file is responsible for things like
+After the scene is loaded, this is the second async event in the boilerplate. We then need to load that `project.editorproject` file, and then it basically decorates the scene with some additional information in this file. This file is responsible for things like
 
 - particles
 - prefabs
 - post processing
 - metadata about the scene
 
-finally after these two sequential file loads, we can begin to render.
+finally, after these two sequential file loads, we can begin to render.
 
 So basically the process is to
 
 1. initialize the engine
 2. load the scene THEN
 3. handle 'mistakes'/ default stuff for a scene
-4. load the editorproject meta data
+4. load the .editorproject meta-data
 5. decorate the scene with metadata
 6. actually begin rendering
 
@@ -915,9 +915,9 @@ Now, henceforth, you should follow this workflow carefully.
 More tips:
 
 - _Never_ try to load from the files in the `web-project`
-- the files in the `web-project` are effectively are _output only_. It is essentially no differnt than a build folder.
+- the files in the `web-project` are effectively are _output only_. It is essentially no different than a build folder.
 - If the artists wish to keep multiple versions of scenes, then it is their responsibility to make the right folders in the `editor-projects`.
-- Exporting to the `web-project` will show changes in the web-app right away, but if you close the editor before you saved in `editor projects` your changes might be gone. If you like what you see, carefulyl export to both.
+- Exporting to the `web-project` will show changes in the web-app right away, but if you close the editor before you saved in `editor projects` your changes might be gone. If you like what you see, carefully export to both.
 - Honestly? Don't use `CTRL + S` if you are switching between projects, or if you are working in the editor project and periodically exporting to the web-project. The GUI/path always remembers whatever was used last. You might stomp over a project, that or accidentally save your editor-project stuff in the web-project. Just Always use `Save As...` until this is changes.
 
 #### For Next time: What wasn't covered (but might come in the future)
