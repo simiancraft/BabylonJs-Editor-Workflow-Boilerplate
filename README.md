@@ -38,6 +38,7 @@ In short here are our goals:
       - [Verify basic project scaffold](#verify-basic-project-scaffold)
       - [Provision Multiscene Project](#provision-multiscene-project)
   - [5. The Final Workflow](#5-the-final-workflow)
+      - [Workflow Tips](#workflow-tips)
       - [For Next time: What wasn't covered (but might come in the future)](#for-next-time-what-wasnt-covered-but-might-come-in-the-future)
 
 ---
@@ -912,7 +913,7 @@ Now, henceforth, you should follow this workflow carefully.
    - carefully use `Project` > `Save Project As...` and navigate to the Scene folder in `editor-projects`
    - use `Scene` > `Export Final Scene and Assets...` and navigate to the Scene folder in `web-project`
 
-More tips:
+#### Workflow Tips
 
 - _Never_ try to load from the files in the `web-project`
 - the files in the `web-project` are effectively are _output only_. It is essentially no different than a build folder.
