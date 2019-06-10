@@ -33,7 +33,7 @@ In short here are our goals:
       - [Save Your Work Thusfar](#save-your-work-thusfar)
       - [Put a Bird on it (adding a mesh)](#put-a-bird-on-it-adding-a-mesh)
       - [Verify Work Thusfar.](#verify-work-thusfar)
-  - [1. Scaffold and provision a web project](#1-scaffold-and-provision-a-web-project)
+  - [4. Scaffold and provision a web project](#4-scaffold-and-provision-a-web-project)
       - [Scaffold basic project](#scaffold-basic-project)
       - [Verify basic project scaffold](#verify-basic-project-scaffold)
       - [Provision Multiscene Project](#provision-multiscene-project)
@@ -461,7 +461,7 @@ Test this with the `play` button, and save it like we have been.
         `📜 scene.editorproject
 ```
 
-## 1. Scaffold and provision a web project
+## 4. Scaffold and provision a web project
 
 Now we want to establish the other half of our project, the part that will run in the context of a web application.
 
@@ -739,3 +739,83 @@ export default class Game {
   }
 }
 ```
+
+I want to draw attention to a couple of particular spots, to understand this file a little more than the comments explain.
+
+```ts
+  constructor() {
+    // Create engine
+    this.engine = new Engine(this.canvas, true, {
+      // Options
+    });
+
+    // Events
+    window.addEventListener("resize", () => this.engine.resize());
+  }
+```
+
+This is the constructor, and there's not much to it, except it creates the engine and also make the engine work with resizing the window.
+
+```ts
+SceneLoader.Load(
+  "./scene/",
+  "scene.babylon",
+  this.engine,
+  (scene: Scene) => {
+    this.scene = scene;
+  }
+
+  //..other stuff
+);
+```
+
+In this closure, we essentially run the scene when the Game is done with the constructor. Right now, you can see this is clearly pointing to the wrong place, its pointing to the way the folders looked before we changed things. When this works this will eb responsible for things like
+
+- meshes
+- cameras
+- lights
+- scaling, positioning
+- locations of assets, like textures, etc.
+
+```ts
+// No camera?
+if (!this.scene.activeCamera) {
+  this.scene.createDefaultCamera(false, true, true);
+}
+
+// Attach camera
+this.scene.activeCamera.attachControl(this.canvas, true);
+```
+
+This is just some code to make sure the camera is there, and works. If for some reason you saved a scene without an active camera it will make one for you.
+
+```ts
+Tools.LoadFile("./scene/project.editorproject", (data: string) => {
+  // Apply extensions (such as custom code, custom materials etc.)
+  Extensions.RoolUrl = "./scene/";
+  Extensions.ApplyExtensions(this.scene, JSON.parse(data));
+
+  // Run render loop
+  this.engine.runRenderLoop(() => {
+    this.scene.render();
+  });
+});
+```
+
+After the scene is loaded, this is the second async event in the boilerplate. We then need to load that `project.editorproject` file, and then it basically decorates the cene with some additional information in this file. This file is responsible for things like
+
+- particles
+- prefabs
+- post processing
+- metadata about the scene
+
+finally after these two sequential file loads, we can begin to render.
+
+So basically the process is to
+
+1. initialize the engine
+2. load the scene THEN
+3. handle 'mistakes'/ default stuff for a scene
+4. load the editorproject meta data
+5. decorate the scene with metadata
+6. actually begin rendering
