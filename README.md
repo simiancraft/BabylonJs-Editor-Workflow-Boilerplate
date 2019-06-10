@@ -37,6 +37,7 @@ In short here are our goals:
       - [Scaffold basic project](#scaffold-basic-project)
       - [Verify basic project scaffold](#verify-basic-project-scaffold)
       - [Provision Multiscene Project](#provision-multiscene-project)
+      - [The Final Workflow](#the-final-workflow)
 
 ---
 
@@ -819,3 +820,85 @@ So basically the process is to
 4. load the editorproject meta data
 5. decorate the scene with metadata
 6. actually begin rendering
+
+Replace your `game.ts` with this:
+
+```ts
+import {
+  CannonJSPlugin,
+  Engine,
+  Scene,
+  SceneLoader,
+  Tools,
+  Vector3
+} from "babylonjs";
+
+import { Extensions } from "babylonjs-editor";
+
+export default class Game {
+  public engine: Engine;
+  public canvas: HTMLCanvasElement = <HTMLCanvasElement>(
+    document.getElementById("renderCanvas")
+  );
+
+  public scene: Scene = null;
+  constructor() {
+    this.engine = new Engine(this.canvas, true, {});
+    window.addEventListener("resize", () => this.engine.resize());
+  }
+
+  public run(): void {
+    const rainyDay = `./scenes/Rainy-Day/`;
+    const spaceScene = `./scenes/Space-Scene/`;
+    let currentScene = rainyDay;
+
+    SceneLoader.Load(
+      `${currentScene}`,
+      "scene.babylon",
+      this.engine,
+      (scene: Scene) => {
+        this.scene = scene;
+
+        if (!this.scene.activeCamera) {
+          this.scene.createDefaultCamera(false, true, true);
+        }
+
+        this.scene.activeCamera.attachControl(this.canvas, true);
+
+        Tools.LoadFile(
+          `${currentScene}/project.editorproject`,
+          (data: string) => {
+            Extensions.RoolUrl = currentScene;
+            Extensions.ApplyExtensions(this.scene, JSON.parse(data));
+            this.engine.runRenderLoop(() => {
+              this.scene.render();
+            });
+          }
+        );
+      }
+    );
+  }
+}
+```
+
+This is quite similar to before with a small change. We added the correct path to the two scenes. If your webserver was running, end it and run `yarn build && yarn run webserver` to rebuild and check the new paths.
+
+Go ahead and check, Rainy-Day should load.
+
+![image](https://user-images.githubusercontent.com/954596/59168147-2b095600-8afa-11e9-8e39-fb453339f4e8.png)
+
+Stop the server. Now change `currentScene` to the `Space-Scene`. `yarn build && yarn run webserver`
+
+```ts
+const rainyDay = `./scenes/Rainy-Day/`;
+const spaceScene = `./scenes/Space-Scene/`;
+let currentScene = spaceScene;
+```
+
+Check the Space Scene. Use `F12` to open the inspector. If you get the same scene from before check a few things
+
+- make sure the build script is actually cleaning out the right folder with `rimraf`
+- make sure to disable caching in the inspector
+  ![image](https://user-images.githubusercontent.com/954596/59168991-f3041200-8afd-11e9-8b0c-928b7186c8de.png)
+
+#### The Final Workflow

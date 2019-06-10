@@ -1,0 +1,22 @@
+{
+  "name": "portfinder",
+  "version": "0.4.0",
+  "description": "A simple tool to find an open port on the current machine",
+  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:indexzero/node-portfinder.git"
+  },
+  "keywords": ["http", "ports", "utilities"],
+  "dependencies": {
+    "async": "0.9.0",
+    "mkdirp": "0.5.x"
+  },
+  "devDependencies": {
+    "vows": "0.8.0"
+  },
+  "main": "./lib/portfinder",
+  "scripts": { "test": "vows test/*-test.js --spec" },
+  "engines": { "node": ">= 0.8.0" },
+  "license": "MIT/X11"
+}
