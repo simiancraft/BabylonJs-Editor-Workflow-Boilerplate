@@ -2,6 +2,11 @@
 
 ![image](https://user-images.githubusercontent.com/954596/59084404-b697a280-88c0-11e9-959a-336c0b8d15e2.png)
 
+
+- By: *Jesse Harlin* (info[at]simiancraft.com)
+- Twitter: [*@5imian*](https://twitter.com/5imian)
+- Site: [jesseharlin.net](http://jesseharlin.net/)
+
 One of the most important things in working in the BabylonJs Editor system is a reliable and stable workflow. The purpose of this short guide is to jumpstart anyone with the BabylonJs Editor and adopt the recommended workflow.
 
 Over the course of the next steps, we will be creating a project that can be run on the web where multiple scenes might exist. This is the sort of setup one might encounter if they are, for instance, making a video game with multiple levels or if they are working on a team where different folks might work on the art and the assets from the folks that are working on the code. However, even if you are responsible for every aspect of a project, or if your project doesn't have multiple scenes, this is still the ideal approach to structuring a project so that you can work comfortably with an editor.
